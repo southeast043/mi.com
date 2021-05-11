@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+@import url("./hearder.less");
+
+.nav {
+    >:nth-child(1) {
+        >:nth-child(2) {
+            .all {
+                >a {
+                    display: block;
+                }
+
+                .all-drop {
+                    display: none;
+                    border: 1px solid #ff6700;
+                    background-color: #fff;
+
+                    >ul {
+                        >li {
+                            >a {
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .all:hover {
+                .all-drop {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+// 标题
+.title {
+    box-shadow: #ccc 0 0 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+
+    .title-c {
+        width: 1226px;
+        margin: 0 auto;
+        height: 60px;
+
+        >h2 {
+            font-size: 18px;
+            line-height: 60px;
+            color: #424242;
+            float: left;
+        }
+
+        >a {
+            font-size: 14px;
+            line-height: 60px;
+            color: #616161;
+            transition: color 0.4s;
+            float: right;
+
+        }
+
+        >a:hover {
+            color: #ff6700;
+        }
+    }
+}
+
+// 内容
+.content {
+    width: 1226px;
+    margin: 0 auto;
+    padding: 30px 0 10px;
+
+    .content-left {
+        width: 560px;
+        height: 560px;
+
+        .carousel-indicators {
+            z-index: 1000;
+
+            .active {
+                background-color: #a3a3a3;
+            }
+
+            >li {
+                background: #ccc;
+                width: 50px;
+                border-radius: 0;
+                border: 0;
+                height: 3px;
+            }
+
+        }
+
+        .container-fluid {
+
+            .left {
+                >div {
+                    width: 41px;
+                    height: 69px;
+                    background: url(../img/icon-slides.png) no-repeat -85px 0;
+                    position: absolute;
+                    top: 245px;
+                    left: 0;
+                }
+
+                >div:hover {
+                    background: url(../img/icon-slides.png) no-repeat 0 0;
+                }
+            }
+
+            .right {
+                >div {
+                    width: 41px;
+                    height: 69px;
+                    background: url(../img/icon-slides.png) no-repeat -126px 0;
+                    position: absolute;
+                    top: 245px;
+                    right: 0;
+                }
+
+                >div:hover {
+                    background: url(../img/icon-slides.png) no-repeat -41px 0;
+                }
+            }
+        }
+    }
+
+    .content-right {
+        >:nth-child(1) {
+            font-size: 24px;
+            color: #212121;
+        }
+
+        >:nth-child(2) {
+            font-size: 14px;
+            color: #b0b0b0;
+            margin-top: 8px
+        }
+
+        >:nth-child(3) {
+            font-size: 14px;
+            color: #ff6700;
+            margin-top: 14px
+        }
+
+        >:nth-child(4) {
+            padding: 12px 0 20px;
+            font-size: 18px;
+            color: #ff6700;
+            border-bottom: 1px solid #b0b0b0;
+
+            >del {
+                font-size: 14px;
+                margin-left: 5px;
+                color: #b0b0b0;
+            }
+        }
+
+        >:nth-child(5) {
+            padding: 30px 50px;
+            background-color: #fafafa;
+            position: relative;
+            margin-top: 20px;
+
+            >span {
+                position: absolute;
+                top: 40px;
+                left: 20px;
+            }
+
+            >div {
+                >p {
+                    font-size: 14px;
+
+                    >span {
+                        margin-right: 14px;
+                    }
+
+                    >a {
+                        color: #ff6700;
+                    }
+                }
+
+                >:nth-child(2) {
+                    color: #ff6700;
+                }
+            }
+        }
+
+        >h3 {
+            font-size: 18px;
+            line-height: 50px;
+            margin-top: 10px;
+        }
+
+        >:nth-child(7),
+        >:nth-child(9) {
+            width: 290px;
+            height: 40px;
+            color: #ff6700;
+            border: 1px solid #ff6700;
+            line-height: 40px;
+            text-align: center;
+            font-size: 16px
+        }
+
+        >:nth-child(10) {
+            margin-top: 20px;
+            padding: 30px;
+            background: #f9f9fa;
+
+            >div {
+                font-size: 14px;
+                color: #616161;
+
+                >del {
+                    margin-left: 5px;
+                }
+            }
+
+            >h2 {
+                font-size: 24px;
+                margin-top: 20px;
+                color: #ff6700;
+            }
+        }
+
+        >:nth-child(11) {
+            margin-top: 30px;
+
+            >:nth-child(1) {
+                >a {
+                    display: block;
+                    width: 300px;
+                    height: 54px;
+                    font-size: 16px;
+                    line-height: 54px;
+                    text-align: center;
+                    background-color: #ff6700;
+                    color: #fff;
+                }
+
+            }
+
+            >:nth-child(2) {
+                >a {
+                    display: block;
+                    width: 142px;
+                    height: 54px;
+                    font-size: 16px;
+                    line-height: 54px;
+                    text-align: center;
+                    margin-left: 10px;
+                    background-color: #b0b0b0;
+                    color: #fff;
+
+                    >span {
+                        margin-right: 5px;
+                        font-size: 18px;
+                        position: relative;
+                        top: 4px;
+                    }
+                }
+            }
+        }
+        >:nth-child(12){
+            margin-top: 20px;
+            >span{
+                >a{
+                    display: inline-block;
+                    font-size: 14px;
+                    color: #b0b0b0;
+                    margin: 0 10px 20px 0;
+                }
+            }
+        }
+    }
+}
+
+// 详情
+.detail{
+    width: 1226px;
+    margin: 0 auto;
+    >img{
+        width: 100%;
+    }
+    >h2{
+        padding: 22px 0;
+        font-size: 22px;
+    }
+}
+
+
+
+
+
+@import url("./footer.less");

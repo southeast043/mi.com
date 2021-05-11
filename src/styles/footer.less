@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+// 服务
+.service {
+    .service-title {
+        width: 1226px;
+        height: 80px;
+        margin: 0 auto;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 28px 0;
+        display: flex;
+
+        >li {
+            width: 25%;
+
+            >a {
+                display: block;
+                width: 100%;
+                height: 24px;
+                text-align: center;
+                font-size: 16px;
+                line-height: 24px;
+                color: gray;
+                border-right: 1px solid #e0e0e0;
+                transition: color 0.4s;
+            }
+
+            a:hover {
+                color: #ff6700;
+            }
+        }
+    }
+
+    .service-content {
+        width: 1226px;
+        padding: 40px 0;
+        margin: 0 auto;
+
+        >:nth-child(1) {
+            width: 974px;
+            display: flex;
+
+            >ul {
+                flex-grow: 1;
+
+                >li {
+                    font-size: 12px;
+                    margin-bottom: 5px;
+
+                    >a {
+                        color: #757575;
+                    }
+
+                    >a:hover {
+                        color: #ff6700;
+                    }
+                }
+
+                >:nth-child(1) {
+                    font-size: 14px;
+                    color: #424242;
+                    margin-bottom: 26px;
+                }
+
+
+            }
+        }
+
+        >:nth-child(2) {
+            width: 252px;
+            text-align: center;
+            border-left: 1px solid #e0e0e0;
+
+            >h2 {
+                font-size: 22px;
+                color: #ff6700;
+                margin-bottom: 5px;
+            }
+
+            >p {
+                color: #616161;
+                line-height: 18px;
+
+                >a {
+                    color: #616161;
+                    position: relative;
+
+                    >span {
+                        font-size: 18px;
+                        margin-left: 5px;
+                        line-height: 18px;
+                        position: relative;
+                        top: 2px;
+                    }
+
+                    >img {
+                        width: 126px;
+                        height: 126px;
+                        position: absolute;
+                        top: 15px;
+                        left: -50px;
+                        display: none !important;
+                    }
+
+                }
+
+                >a:hover {
+                    color: #ff6700;
+                }
+
+                >:nth-child(2):hover {
+                    >img {
+                        display: block !important;
+                    }
+
+                    >img:hover {
+                        display: none !important;
+                    }
+
+                }
+            }
+
+            >div {
+                >a {
+                    display: block;
+                    width: 120px;
+                    height: 30px;
+                    color: #ff6700;
+                    border: 1px solid #ff6700;
+                    font-size: 12px;
+                    margin: 5px auto;
+                    transition: all 0.4s;
+                    line-height: 30px;
+
+                    >span {
+                        font-size: 12px;
+                        margin-right: 4px;
+                    }
+                }
+
+                >a:hover {
+                    color: #fff;
+                    background-color: #ff6700;
+                }
+            }
+        }
+    }
+
+
+
+
+}
+
+// 底部
+
+.footer {
+    padding: 30px 0;
+    background-color: #fafafa;
+
+    .footer-c {
+        width: 1226px;
+        margin: 0 auto;
+
+        >:nth-child(1) {
+            display: flex;
+
+            .footer-logo {
+                >img {
+                    width: 56px;
+                    height: 56px;
+                    margin-right: 10px;
+                }
+            }
+
+            .footer-content {
+
+                >:nth-child(1) {
+                    line-height: 18px;
+                    font-size: 12px;
+
+                    >a {
+                        color: #757575;
+                    }
+
+                    >a:hover {
+                        color: #ff6700;
+                    }
+
+                    >span {
+                        color: #b0b0b0;
+                    }
+                }
+
+                >:nth-child(2) {
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #b0b0b0;
+
+                    >a {
+                        color: #b0b0b0;
+                    }
+
+                    >a:hover {
+                        color: #ff6700;
+                    }
+                }
+
+                >:nth-child(3) {
+                    >a {
+                        display: block;
+
+                        .none {
+                            display: none !important;
+                        }
+
+                        >img {
+                            width: 83px;
+                            height: 28px;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        >:nth-child(2) {
+            >img {
+                margin: 30px auto 0;
+            }
+        }
+    }
+}
+
+// 侧边栏
+.sidebar {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    z-index: 202;
+
+    >a {
+        display: block;
+        background-color: #fff;
+
+        >li {
+            width: 84px;
+            height: 92px;
+            padding-top: 18px;
+            .show {
+                display: block !important;
+            }
+
+            >img {
+                width: 30px;
+                height: 30px;
+                margin: 0 auto;
+                display: none !important;
+            }
+
+            >p {
+                margin-top: 5px;
+                font-size: 14px;
+                text-align: center;
+                color: #757575;
+                transition: all 0.4s;
+            }
+
+            >div {
+                width: 130px;
+                height: 191px;
+                background-color: #fff;
+                padding: 15px;
+                position: absolute;
+                top: 0;
+                left: -150px;
+                display: none;
+                transition: all 0.5s;
+
+                >img {
+                    width: 100px;
+                    height: 100px;
+
+                }
+
+                >span {
+                    display: block;
+                    width: 82px;
+                    margin: 14px auto 0;
+                    color: #757575;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    >:nth-child(1):hover {
+        >li {
+            >div {
+                display: block;
+            }
+        }
+    }
+
+    >:nth-last-child(1) {
+        margin-top: 20px;
+        display: none;
+
+    }
+}

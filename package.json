@@ -1,0 +1,27 @@
+{
+  "name": "www.mi.com",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/southeast043/mi.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/southeast043/mi.com/issues"
+  },
+  "homepage": "https://github.com/southeast043/mi.com#readme",
+  "description": ""
+}

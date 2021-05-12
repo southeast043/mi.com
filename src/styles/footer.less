@@ -99,7 +99,7 @@
                         position: absolute;
                         top: 15px;
                         left: -50px;
-                        display: none !important;
+                        display: none;
                     }
 
                 }
@@ -110,11 +110,11 @@
 
                 >:nth-child(2):hover {
                     >img {
-                        display: block !important;
+                        display: block;
                     }
 
                     >img:hover {
-                        display: none !important;
+                        display: none;
                     }
 
                 }
@@ -246,15 +246,16 @@
             width: 84px;
             height: 92px;
             padding-top: 18px;
-            .show {
-                display: block !important;
-            }
 
             >img {
                 width: 30px;
                 height: 30px;
                 margin: 0 auto;
-                display: none !important;
+                display: none;
+            }
+
+            .bg1 {
+                display: block;
             }
 
             >p {
@@ -291,6 +292,12 @@
                 }
             }
         }
+
+        >li:hover {
+            >p {
+                color: #ff6700;
+            }
+        }
     }
 
     >:nth-child(1):hover {
@@ -304,6 +311,5 @@
     >:nth-last-child(1) {
         margin-top: 20px;
         display: none;
-
     }
 }

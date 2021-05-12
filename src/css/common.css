@@ -18,7 +18,7 @@ input {
   padding: 0;
 }
 img {
-  display: block !important;
+  display: block;
   /*去除img下方3-6px间距*/
 }
 a {

@@ -110,6 +110,38 @@ $(function () {
 
     // 秒杀
 
+    // 倒计时
+    let futuer = new Date(2021, 9, 30, 18, 0, 0); // 未来时间
+
+    let time = document.getElementById('time');
+
+    setInterval(function () {
+        let current = new Date();
+        let ms = futuer - current;
+        let s = ms / 1000; // 获得秒
+        let day = parseInt(s / 86400);
+        let hour = parseInt(s % 86400 / 3600);
+        let min = parseInt(s % 3600 / 60);
+        let sec = parseInt(s % 60);
+        if (hour < 10) hour = "0" + hour;
+        if (min < 10) min = "0" + min;
+        if (sec < 10) sec = "0" + sec;
+        $('.sekill-content>div>:nth-child(4)>:nth-child(1)').text(hour);
+        $('.sekill-content>div>:nth-child(4)>:nth-child(3)').text(min);
+        $('.sekill-content>div>:nth-child(4)>:nth-child(5)').text(sec   );
+    }, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
 
     // 家电
     $('.title>ul>li').on('mouseover', function () {
@@ -132,21 +164,16 @@ $(function () {
     $('.sidebar>a>li').on('mouseover', function () {
         // 鼠标悬停
         let index = $('.sidebar>a>li').index(this);
-        console.log($(this).children());
-        // $(this).children().eq(2).addClass('show');
-        // $('.sidebar>a>li').on('mouseover', function () {
-        //     $(this).children().eq(2).removeClass('show');
-        //     $(this).children().eq(1).addClass('show');
-        // })
+
+        $('.bg1').eq(index).css('display', 'none');
+        $('.bg2').eq(index).css('display', 'block');
+
+        $('.sidebar>a>li').on('mouseout', function () {
+            // 鼠标移出
+            // let index = $('.sidebar>a>li').index(this);
+
+            $('.bg2').eq(index).css('display', 'none');
+            $('.bg1').eq(index).css('display', 'block');
+        })
     })
-
-
-
-
-
-
-
-
-
-
 })

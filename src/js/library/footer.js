@@ -3,9 +3,9 @@ import { $ } from "./jquery.js";
 let footer = $(function () {
 
     // 侧边栏
-    $(window).scroll(function () {
+    $(document).scroll(function () {
         // 回顶部
-        if ($(window).scrollTop() >= 800) {
+        if ($(document).scrollTop() >= 800) {
             $('.sidebar>:nth-last-child(1)').css('display', 'block');
         } else if ($(window).scrollTop() < 800) {
             $('.sidebar>:nth-last-child(1)').css('display', 'none');

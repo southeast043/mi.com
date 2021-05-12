@@ -65,7 +65,8 @@
                 top: 80px;
                 right: 70px;
                 box-shadow: #ccc 0 0 5px;
-                display: none;
+                height: 0;
+                overflow: hidden;
 
                 >li {
                     width: 110px;
@@ -355,6 +356,7 @@
                 background-color: #fff;
                 position: relative;
                 padding: 40px 20px 0;
+                overflow: hidden;
 
                 >img {
                     width: 140px;
@@ -391,13 +393,19 @@
                     border: 1px solid #ff6700;
                     transition: all 0.4s;
                     line-height: 30px;
-                    bottom: 15px;
+                    bottom: -30px;
                     left: 56px;
+                    transition: bottom 0.4s;
                 }
 
                 >a:hover {
                     color: #fff;
                     background-color: #ff6700;
+                }
+            }
+            >div:hover{
+                >a{
+                    bottom: 15px;
                 }
             }
         }

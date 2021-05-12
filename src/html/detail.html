@@ -12,6 +12,7 @@
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/detail.css">
+    <script src="../js/detail.js" type="module"></script>
 
 
 
@@ -59,10 +60,10 @@
             <div class="header-right fr">
                 <a href="./login.html">登录</a>
                 <span>|</span>
-                <a href="./register.html">注册</a>
+                <a class="register">注册</a>
                 <span>|</span>
                 <a href="#">消息通知</a>
-                <a class="car fr" href="#">
+                <a class="car fr" href="shoppingCart.html">
                     <span class="iconfont icon-close"></span>购物车 (0)
                     <div class="car-drop">
                         购物车中还没有商品，赶紧选购吧！
@@ -492,7 +493,7 @@
                                         <li>
                                             <a href="#">
                                                 <img src="../img/all-drop-3-15.webp" alt="">
-                                                <span>Redmi显示器23.8英寸</span>
+                                                <spanRedmi显示器23.8英寸< /span>
                                             </a>
                                         </li>
                                         <li>
@@ -981,7 +982,7 @@
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="../img/all-drop-8-5.jpg" alt="">
+                                                <img src="../img/all-drop-ne-8-5.jpg" alt="">
                                                 <span>吹风机</span>
                                             </a>
                                         </li>
@@ -1306,7 +1307,7 @@
         </div>
         <div class="nav-drop">
             <ul>
-                <li data-index="0">
+                <li>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-2">
@@ -1354,7 +1355,7 @@
                         </div>
                     </div>
                 </li>
-                <li data-index="1">
+                <li>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-2">
@@ -1402,55 +1403,55 @@
                         </div>
                     </div>
                 </li>
-                <li data-index="2">
+                <li>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-2">
                                 <a href="#">
                                     <img src="../img/nav-drop-3-1.webp" alt="">
                                     <div>Redmi 86” 超大屏电视</div>
-                                    <p>1999元</p>
+                                    <p>9999元</p>
                                 </a>
                             </div>
                             <div class="col-lg-2">
                                 <a href="#">
                                     <img src="../img/nav-drop-3-2.webp" alt="">
-                                    <div>小米电视大师 82英寸至尊纪念版</div>
-                                    <p>2799元</p>
+                                    <div>小米电视大师 82英寸</div>
+                                    <p>49999元</p>
                                 </a>
                             </div>
                             <div class="col-lg-2">
                                 <a href="#">
                                     <img src="../img/nav-drop-3-3.webp" alt="">
                                     <div>小米电视大师 82英寸</div>
-                                    <p>1999元</p>
+                                    <p>11999元</p>
                                 </a>
                             </div>
                             <div class="col-lg-2">
                                 <a href="#">
                                     <img src="../img/nav-drop-3-4.webp" alt="">
                                     <div>小米透明电视</div>
-                                    <p>999元</p>
+                                    <p>49999元</p>
                                 </a>
                             </div>
                             <div class="col-lg-2">
                                 <a href="#">
                                     <img src="../img/nav-drop-3-5.webp" alt="">
                                     <div>小米电视 大师 65英寸OLED</div>
-                                    <p>2299元</p>
+                                    <p>9999元</p>
                                 </a>
                             </div>
                             <div class="col-lg-2">
                                 <a href="#">
                                     <img src="../img/nav-drop-3-6.webp" alt="">
                                     <div>Redmi 智能电视 MAX 98&#34;</div>
-                                    <p>1999元</p>
+                                    <p>19999元</p>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li data-index="3">
+                <li>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-2">
@@ -1498,7 +1499,7 @@
                         </div>
                     </div>
                 </li>
-                <li data-index="4">
+                <li>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-2">
@@ -1546,7 +1547,7 @@
                         </div>
                     </div>
                 </li>
-                <li data-index="5">
+                <li>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-2">
@@ -1594,7 +1595,7 @@
                         </div>
                     </div>
                 </li>
-                <li data-index="6">
+                <li>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-2">
@@ -1799,18 +1800,6 @@
         <img src="../img/detail-banner-22.jpeg" alt="">
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- 服务 -->
     <div class="service">
         <ul class="service-title">
@@ -1995,7 +1984,6 @@
     </div>
 
     <!-- 侧边栏 -->
-
     <ul class="sidebar">
         <a>
             <li>

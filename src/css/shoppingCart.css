@@ -393,16 +393,16 @@
   position: absolute;
   top: 15px;
   left: -50px;
-  display: none !important;
+  display: none;
 }
 .service .service-content > :nth-child(2) > p > a:hover {
   color: #ff6700;
 }
 .service .service-content > :nth-child(2) > p > :nth-child(2):hover > img {
-  display: block !important;
+  display: block;
 }
 .service .service-content > :nth-child(2) > p > :nth-child(2):hover > img:hover {
-  display: none !important;
+  display: none;
 }
 .service .service-content > :nth-child(2) > div > a {
   display: block;
@@ -491,14 +491,14 @@
   height: 92px;
   padding-top: 18px;
 }
-.sidebar > a > li .show {
-  display: block !important;
-}
 .sidebar > a > li > img {
   width: 30px;
   height: 30px;
   margin: 0 auto;
-  display: none !important;
+  display: none;
+}
+.sidebar > a > li .bg1 {
+  display: block;
 }
 .sidebar > a > li > p {
   margin-top: 5px;
@@ -528,6 +528,9 @@
   margin: 14px auto 0;
   color: #757575;
   text-align: center;
+}
+.sidebar > a > li:hover > p {
+  color: #ff6700;
 }
 .sidebar > :nth-child(1):hover > li > div {
   display: block;

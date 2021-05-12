@@ -303,7 +303,8 @@ body {
   font-size: 20px;
   left: -5px;
   top: 6px;
-  transition: all 0.5s;
+  transition: color 0.5s, background-color 0.5s;
+  cursor: pointer;
 }
 .nav > :nth-child(1) .nav-search .glyphicon-search:hover {
   background-color: #ff6700;

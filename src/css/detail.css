@@ -50,6 +50,125 @@ body {
   z-index: 201;
   overflow: hidden;
 }
+.jump {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: none;
+}
+.jump > div {
+  width: 800px;
+  height: 540px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f5f5f5;
+}
+.jump > div > :nth-child(1) {
+  width: 800px;
+  height: 60px;
+  padding: 15px 20px;
+}
+.jump > div > :nth-child(1) > :nth-child(1) {
+  color: #424242;
+  font-size: 18px;
+  line-height: 30px;
+}
+.jump > div > :nth-child(1) > :nth-child(2) > a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+  border-radius: 50%;
+  transition: all 0.4s;
+  color: #757575;
+  text-align: center;
+  font-size: 28px;
+}
+.jump > div > :nth-child(1) > :nth-child(2) > a:hover {
+  background-color: #e53953;
+  color: #fff;
+}
+.jump > div > :nth-child(3) {
+  width: 800px;
+  height: 80px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.jump > div > :nth-child(3) > div {
+  margin: 0 5px;
+}
+.jump > div > :nth-child(3) > div > a {
+  display: block;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.jump > div > :nth-child(3) > :nth-child(1) {
+  background-color: #ff6700;
+}
+.jump > div > :nth-child(3) > :nth-child(2) {
+  background-color: #b0b0b0;
+}
+.jump > div > :nth-child(3) > :nth-child(1):hover {
+  background-color: #f25807;
+}
+.jump > div > :nth-child(3) > :nth-child(2):hover {
+  background-color: #757575;
+}
+.jump > div > :nth-child(2) {
+  width: 800px;
+  height: 400px;
+  background-color: #fff;
+  padding: 20px;
+}
+.jump > div > :nth-child(2) > :nth-child(1) {
+  color: #333;
+  margin: 0 0 20px 20px;
+  height: 40px;
+}
+.jump > div > :nth-child(2) > :nth-child(1) > span {
+  color: #ff6700;
+  cursor: pointer;
+}
+.jump > div > :nth-child(2) > :nth-child(2) {
+  height: 300px;
+  padding: 20px;
+  overflow: auto;
+  color: #333;
+}
+.jump > div > :nth-child(2) > :nth-child(2) > h2 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+.jump > div > :nth-child(2) > :nth-child(2) > h3 {
+  margin: 20px 0;
+  font-size: 20px;
+}
+.jump > div > :nth-child(2) > :nth-child(2) > h4 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+.jump > div > :nth-child(2) > :nth-child(2) > :nth-child(2) {
+  font-size: 20px;
+  margin: 20px 0;
+  text-align: right;
+}
+.jump > div > :nth-child(2) > :nth-child(2) > p {
+  margin: 14px 0 10px;
+}
+.jump > div > :nth-child(2) > :nth-child(2) img {
+  display: inline-block;
+}
 .nav {
   position: relative;
 }
@@ -139,7 +258,7 @@ body {
   box-shadow: #ccc 0 0 5px;
 }
 .nav > :nth-child(1) > :nth-child(2) > li .all-drop > ul > li > div > ul > li > a {
-  width: 265px;
+  width: 250px;
   height: 76px;
   padding: 18px 20px;
   display: block;
@@ -184,7 +303,8 @@ body {
   font-size: 20px;
   left: -5px;
   top: 6px;
-  transition: all 0.5s;
+  transition: color 0.5s, background-color 0.5s;
+  cursor: pointer;
 }
 .nav > :nth-child(1) .nav-search .glyphicon-search:hover {
   background-color: #ff6700;
@@ -570,16 +690,16 @@ body {
   position: absolute;
   top: 15px;
   left: -50px;
-  display: none !important;
+  display: none;
 }
 .service .service-content > :nth-child(2) > p > a:hover {
   color: #ff6700;
 }
 .service .service-content > :nth-child(2) > p > :nth-child(2):hover > img {
-  display: block !important;
+  display: block;
 }
 .service .service-content > :nth-child(2) > p > :nth-child(2):hover > img:hover {
-  display: none !important;
+  display: none;
 }
 .service .service-content > :nth-child(2) > div > a {
   display: block;
@@ -667,18 +787,19 @@ body {
   width: 84px;
   height: 92px;
   padding-top: 18px;
-}
-.sidebar > a > li .show {
-  display: block !important;
+  position: relative;
 }
 .sidebar > a > li > img {
   width: 30px;
   height: 30px;
-  margin: 0 auto;
-  display: none !important;
+  position: absolute;
+  left: 27px;
+}
+.sidebar > a > li .bg2 {
+  opacity: 0;
 }
 .sidebar > a > li > p {
-  margin-top: 5px;
+  margin-top: 35px;
   font-size: 14px;
   text-align: center;
   color: #757575;
@@ -705,6 +826,9 @@ body {
   margin: 14px auto 0;
   color: #757575;
   text-align: center;
+}
+.sidebar > a > li:hover > p {
+  color: #ff6700;
 }
 .sidebar > :nth-child(1):hover > li > div {
   display: block;

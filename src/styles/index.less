@@ -255,7 +255,6 @@
                     top: 0;
                     left: 0;
                     display: flex;
-                    width: 10000px;
                     overflow: auto;
 
                     >div {
@@ -276,6 +275,9 @@
                                 color: #000;
                                 text-align: center;
                                 margin-bottom: 5px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
                             }
 
                             >p {

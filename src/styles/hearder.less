@@ -73,6 +73,7 @@ body {
   z-index: 9999;
 
   display: none;
+
   >div {
     width: 800px;
     height: 540px;
@@ -175,28 +176,34 @@ body {
         padding: 20px;
         overflow: auto;
         color: #333;
-        >h2{
+
+        >h2 {
           margin: 10px 0;
           font-size: 20px;
         }
-        >h3{
+
+        >h3 {
           margin: 20px 0;
           font-size: 20px;
         }
-        >h4{
+
+        >h4 {
           margin: 10px 0;
           font-size: 20px;
         }
-        >:nth-child(2){
+
+        >:nth-child(2) {
           font-size: 20px;
           margin: 20px 0;
           text-align: right;
         }
-        >p{
+
+        >p {
           margin: 14px 0 10px;
 
         }
-        img{
+
+        img {
           display: inline-block;
         }
       }
@@ -379,7 +386,8 @@ body {
         font-size: 20px;
         left: -5px;
         top: 6px;
-        transition: all 0.5s;
+        transition: color 0.5s, background-color 0.5s;
+        cursor: pointer;
       }
 
       .glyphicon-search:hover {

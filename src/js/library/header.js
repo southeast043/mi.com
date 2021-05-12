@@ -116,4 +116,5 @@ let header = $(function () {
         })
     })
 })
+
 export { header };

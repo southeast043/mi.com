@@ -303,7 +303,8 @@ body {
   font-size: 20px;
   left: -5px;
   top: 6px;
-  transition: all 0.5s;
+  transition: color 0.5s, background-color 0.5s;
+  cursor: pointer;
 }
 .nav > :nth-child(1) .nav-search .glyphicon-search:hover {
   background-color: #ff6700;
@@ -582,7 +583,6 @@ body {
   top: 0;
   left: 0;
   display: flex;
-  width: 10000px;
   overflow: auto;
 }
 .content .seckill .sekill-content > :nth-child(2) > div > div {
@@ -601,6 +601,9 @@ body {
   color: #000;
   text-align: center;
   margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .content .seckill .sekill-content > :nth-child(2) > div > div a > p {
   font-size: 12px;
@@ -1040,22 +1043,23 @@ body {
   width: 84px;
   height: 92px;
   padding-top: 18px;
+  position: relative;
 }
 .sidebar > a > li > img {
   width: 30px;
   height: 30px;
-  margin: 0 auto;
-  display: none;
+  position: absolute;
+  left: 27px;
 }
-.sidebar > a > li .bg1 {
-  display: block;
+.sidebar > a > li .bg2 {
+  opacity: 0;
 }
 .sidebar > a > li > p {
-  margin-top: 5px;
+  margin-top: 35px;
   font-size: 14px;
   text-align: center;
   color: #757575;
-  transition: all 0.4s;
+  transition: all 0.2s;
 }
 .sidebar > a > li > div {
   width: 130px;

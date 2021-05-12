@@ -16,15 +16,22 @@ let footer = $(function () {
         // 鼠标悬停
         let index = $('.sidebar>a>li').index(this);
 
-        $('.bg1').eq(index).css('display', 'none');
-        $('.bg2').eq(index).css('display', 'block');
+        $('.bg1').eq(index).stop().animate({
+            'opacity': '0'
+        }, 200);
+        $('.bg2').eq(index).stop().animate({
+            'opacity': '1'
+        }, 200);
 
         $('.sidebar>a>li').on('mouseout', function () {
             // 鼠标移出
-            // let index = $('.sidebar>a>li').index(this);
 
-            $('.bg2').eq(index).css('display', 'none');
-            $('.bg1').eq(index).css('display', 'block');
+            $('.bg1').eq(index).stop().animate({
+                'opacity': '1'
+            }, 200);
+            $('.bg2').eq(index).stop().animate({
+                'opacity': '0'
+            }, 200);
         })
     })
 

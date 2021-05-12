@@ -2,6 +2,14 @@ import { $ } from "../js/library/jquery.js";
 
 $(function () {
 
+    // 弹出层
+    $('.register').on('click', function () {
+        $('.jump').css('display', 'block')
+    })
+    $('.remove-jump').on('click', function () {
+        $('.jump').css('display', 'none')
+    })
+
     // 购物车
     $('.car').on('mouseover', function () {
 
@@ -113,13 +121,10 @@ $(function () {
     // 倒计时
     let futuer = new Date(2021, 9, 30, 18, 0, 0); // 未来时间
 
-    let time = document.getElementById('time');
-
     setInterval(function () {
         let current = new Date();
         let ms = futuer - current;
         let s = ms / 1000; // 获得秒
-        let day = parseInt(s / 86400);
         let hour = parseInt(s % 86400 / 3600);
         let min = parseInt(s % 3600 / 60);
         let sec = parseInt(s % 60);
@@ -128,7 +133,7 @@ $(function () {
         if (sec < 10) sec = "0" + sec;
         $('.sekill-content>div>:nth-child(4)>:nth-child(1)').text(hour);
         $('.sekill-content>div>:nth-child(4)>:nth-child(3)').text(min);
-        $('.sekill-content>div>:nth-child(4)>:nth-child(5)').text(sec   );
+        $('.sekill-content>div>:nth-child(4)>:nth-child(5)').text(sec);
     }, 1000);
 
 

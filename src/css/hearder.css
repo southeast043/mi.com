@@ -58,6 +58,7 @@ body {
   left: 0;
   right: 0;
   z-index: 9999;
+  display: none;
 }
 .jump > div {
   width: 800px;
@@ -67,8 +68,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f5f5f5;
-  display: flex;
-  flex-direction: column;
 }
 .jump > div > :nth-child(1) {
   width: 800px;
@@ -99,11 +98,76 @@ body {
 .jump > div > :nth-child(3) {
   width: 800px;
   height: 80px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.jump > div > :nth-child(3) > div {
+  margin: 0 5px;
+}
+.jump > div > :nth-child(3) > div > a {
+  display: block;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.jump > div > :nth-child(3) > :nth-child(1) {
+  background-color: #ff6700;
+}
+.jump > div > :nth-child(3) > :nth-child(2) {
+  background-color: #b0b0b0;
+}
+.jump > div > :nth-child(3) > :nth-child(1):hover {
+  background-color: #f25807;
+}
+.jump > div > :nth-child(3) > :nth-child(2):hover {
+  background-color: #757575;
 }
 .jump > div > :nth-child(2) {
-  flex-grow: 1;
+  width: 800px;
+  height: 400px;
   background-color: #fff;
+  padding: 20px;
+}
+.jump > div > :nth-child(2) > :nth-child(1) {
+  color: #333;
+  margin: 0 0 20px 20px;
+  height: 40px;
+}
+.jump > div > :nth-child(2) > :nth-child(1) > span {
+  color: #ff6700;
+  cursor: pointer;
+}
+.jump > div > :nth-child(2) > :nth-child(2) {
+  height: 300px;
+  padding: 20px;
   overflow: auto;
+  color: #333;
+}
+.jump > div > :nth-child(2) > :nth-child(2) > h2 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+.jump > div > :nth-child(2) > :nth-child(2) > h3 {
+  margin: 20px 0;
+  font-size: 20px;
+}
+.jump > div > :nth-child(2) > :nth-child(2) > h4 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+.jump > div > :nth-child(2) > :nth-child(2) > :nth-child(2) {
+  font-size: 20px;
+  margin: 20px 0;
+  text-align: right;
+}
+.jump > div > :nth-child(2) > :nth-child(2) > p {
+  margin: 14px 0 10px;
+}
+.jump > div > :nth-child(2) > :nth-child(2) img {
+  display: inline-block;
 }
 .nav {
   position: relative;

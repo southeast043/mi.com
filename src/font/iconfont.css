@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1620564566740') format('truetype');
+  src: url('iconfont.ttf?t=1620827009182') format('truetype');
 }
 
 .iconfont {
@@ -25,6 +25,14 @@
 
 .icon-banshou:before {
   content: "\e518";
+}
+
+.icon-yanjing:before {
+  content: "\e631";
+}
+
+.icon-yanjing1:before {
+  content: "\e673";
 }
 
 .icon-wenhao-copy:before {

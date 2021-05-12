@@ -34,6 +34,20 @@
       "unicode_decimal": 58648
     },
     {
+      "icon_id": "4479100",
+      "name": "眼睛",
+      "font_class": "yanjing",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "12082210",
+      "name": "闭眼",
+      "font_class": "yanjing1",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
       "icon_id": "12370117",
       "name": "问好",
       "font_class": "wenhao-copy",

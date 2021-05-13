@@ -46,23 +46,44 @@ $(function () {
             'top': '10px'
         }, 200).css('color', '#bbb')
 
+        $(this).siblings('div').css({
+            'background-color': '#fff'
+        })
+
         $('.input>input').on('blur', function () {
 
+            // 失去焦点
             $(this).parent().css('border', 'none')
 
             if ($(this).val() == '') {
+
                 $(this).css({
                     'background-color': 'rgba(252,242,243)'
                 }).parent().children('p').stop().animate({
                     'font-size': '17px',
                     'top': '20px'
-                }, 200).css('color', '#f04645').parent().next().css('display', 'block')
-            } else (
+                }, 200).css({
+                    'color': '#f04645'
+                }).parent().next().css('display', 'block')
+
+                $(this).siblings('div').css({
+                    'background-color': 'rgba(252,242,243)'
+                }).children(':first').children(':first').css({
+                    'color': '#f04645'
+                })
+
+            } else {
                 $(this).css({
-                    'background-color': 'rgba(0,0,0,0.03)'
+                    'background-Fcolor': 'rgba(0,0,0,0.03)'
                 }).parent().next().css('display', 'none')
-            )
+
+                $(this).siblings('div').children(':first').children(':first').css({
+                    'color': '#aaa'
+                })
+
+            }
         })
+
     })
 
     // 显示密码
@@ -78,5 +99,28 @@ $(function () {
             $(this).addClass('icon-yanjing1').removeClass('icon-yanjing');
             $(this).siblings('input').attr('type', 'password');
         }
+    })
+
+    // 国家
+    $('.phone>:first').on('click', function () {
+        if ($('.country').css('display') == 'none') {
+            $('.country').css('display', 'block');
+        } else if ($('.country').css('display') == 'block') {
+            $('.country').css('display', 'none');
+        }
+    })
+
+    // 按钮
+    $('button').on('mouseover', function () {
+        $(this).stop().animate({
+            'opacity': '0.3'
+        }, 300)
+
+        $(this).on('mouseout', function () {
+            $(this).stop().animate({
+                'opacity': '0.5'
+            }, 300)
+
+        })
     })
 })

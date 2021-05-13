@@ -13,6 +13,8 @@
  *
  */
 
+import { $ } from './jquery.js'
+
 (function ($, window, document, undefined) {
     var $window = $(window);
 
@@ -239,4 +241,4 @@
         "left-of-fold": function (a) { return !$.rightoffold(a, { threshold: 0 }); }
     });
 
-})(jQuery, window, document);
+})($, window, document);

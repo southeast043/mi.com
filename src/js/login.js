@@ -41,7 +41,7 @@ $(function () {
             'background-color': '#fff'
         }).parent().css({
             'border': '2px solid #ff5c00'
-        }).find('p').stop().animate({
+        }).children('p').stop().animate({
             'font-size': '12px',
             'top': '10px'
         }, 200).css('color', '#bbb')
@@ -53,7 +53,7 @@ $(function () {
             if ($(this).val() == '') {
                 $(this).css({
                     'background-color': 'rgba(252,242,243)'
-                }).parent().find('p').stop().animate({
+                }).parent().children('p').stop().animate({
                     'font-size': '17px',
                     'top': '20px'
                 }, 200).css('color', '#f04645').parent().next().css('display', 'block')

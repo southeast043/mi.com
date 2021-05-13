@@ -1,8 +1,14 @@
 import { $ } from "../js/library/jquery.js";
 import { header } from "../js/library/header.js";
 import { footer } from "../js/library/footer.js";
+import "../js/library/jquery.lazyload.js"
 
 $(function () {
+
+    $("img.lazy").lazyload({
+        effect: "fadeIn",
+        threshold: 0
+    });
 
     // 头部
     header;

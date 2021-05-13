@@ -120,20 +120,15 @@ body {
                 width: 100%;
                 position: relative;
 
+                .active {
+                    color: #333;
+                }
+
                 >div {
-                    .active {
-                        color: #333;
-                    }
-
-                    .show {
-                        display: block;
-                    }
-
-                    >a {
-                        font-size: 22px;
-                        color: #bbb;
-                        margin: 0 10px;
-                    }
+                    font-size: 22px;
+                    color: #bbb;
+                    margin: 0 10px;
+                    cursor: pointer;
                 }
 
                 >:nth-child(3) {
@@ -143,7 +138,7 @@ body {
                     background-color: #ff5c00;
                     position: absolute;
                     top: 30px;
-                    left: 10px;
+                    left: 0;
                 }
 
             }
@@ -151,61 +146,62 @@ body {
             .content-con {
                 width: 360px;
                 height: 520px;
-                border: 1px solid red;
                 position: relative;
+                overflow: hidden;
 
                 >div {
-                    width: 720px;
+                    width: 1080px;
                     position: absolute;
                     top: 0;
-                    left: 0;
+                    left: -0;
 
                     input {
                         padding: 30px 20px 10px;
-                        width: 100%;
+                        width: 356px;
                         height: 60px;
                         outline: none;
                         border: none;
                         font-size: 17px;
                         color: #333;
                         line-height: 20px;
-                        border-radius: 5px;
                         background-color: rgba(0, 0, 0, 0.03);
-                        margin: 20px 0 0;
                     }
 
                     .input {
                         position: relative;
+                        margin: 20px 0 0;
+                        border-radius: 5px;
 
                         >p {
                             position: absolute;
                             left: 20px;
-                            top: 40px;
+                            top: 20px;
                             font-size: 17px;
                             color: #bbb;
                         }
                     }
 
                     .phone {
-                        .country {
+                        display: flex;
+
+                        >div {
                             width: 140px;
                             height: 60px;
-                            margin-top: 20px;
                             background-color: rgba(0, 0, 0, 0.03);
-                            cursor: pointer;
-                            padding: 0 20px;
-                            position: relative;
+                            padding: 10px 20px 0;
 
-                            .glyphicon-menu-down {
+                            >span {
                                 position: absolute;
-                                right: 20px;
-                                top: 24px;
+                                top: 20px;
+                                left: 100px;
+                                font-size: 16px;
+                                color: #bbb;
                             }
 
                             >div {
                                 >:nth-child(1) {
                                     font-size: 12px;
-                                    margin: 10px 0 0;
+                                    color: #aaa;
                                 }
 
                                 >:nth-child(2) {
@@ -214,13 +210,81 @@ body {
                             }
                         }
 
-                        input {
+                        >input {
                             width: 220px;
-                            height: 60px;
                         }
 
                         >p {
                             left: 160px;
+                        }
+                    }
+
+                    .country {
+                        position: absolute;
+                        background-color: #fff;
+                        top: 60px;
+                        left: 0;
+                        display: none;
+                        z-index: 100;
+
+                        >:nth-child(1) {
+                            width: 356px;
+                            height: 68px;
+                            padding: 10px 20px;
+                            position: relative;
+
+                            >input {
+                                padding: 0 20px 0 48px;
+                                width: 100%;
+                                height: 100%;
+                                color: #bbb;
+                            }
+
+                            .glyphicon-search {
+                                display: block;
+                                position: absolute;
+                                width: 48px;
+                                height: 48px;
+                                font-size: 18px;
+                                line-height: 48px;
+                                text-align: center;
+                                top: 10px;
+                                left: 20px;
+                            }
+                        }
+
+                        >:nth-child(2) {
+                            width: 356px;
+                            height: 360px;
+                            overflow: auto;
+
+                            >div {
+                                padding: 0 20px;
+                                font-size: 12px;
+                                color: #ff5c00;
+                            }
+
+                            >ul {
+                                >li {
+                                    width: 356px;
+                                    height: 60px;
+                                    padding: 10px 20px;
+                                    font-size: 17px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    cursor: pointer;
+
+                                    >div {
+                                        font-size: 17px;
+                                        color: #999;
+                                    }
+                                }
+
+                                >li:hover {
+                                    background-color: #fff3e6;
+                                }
+                            }
                         }
                     }
 
@@ -241,13 +305,14 @@ body {
                         color: #f04645 !important;
                         font-size: 12px;
                         margin-top: 10px;
+                        display: none;
                     }
 
                     .iconfont {
                         position: absolute;
                         width: 60px;
                         height: 60px;
-                        top: 20px;
+                        top: 0;
                         right: 0;
                         line-height: 60px;
                         text-align: center;
@@ -297,24 +362,8 @@ body {
 
                     #register {
                         width: 360px;
-                        position: relative;
+                        margin-left: 360px;
 
-                        .captcha {
-                            width: 100px;
-                            height: 60px;
-                            position: absolute;
-                            right: 0;
-                            top: 20px;
-                            line-height: 60px;
-                            text-align: center;
-                            color: #ff5c00;
-                            cursor: pointer;
-                            transition: color 0.4s;
-                        }
-
-                        .captcha:hover {
-                            color: #ff7e29;
-                        }
                     }
 
                     .other {

@@ -20,6 +20,7 @@
             overflow: hidden;
         }
     </style>
+    <script src="../js/login.js" type="module"></script>
 </head>
 
 <body>
@@ -55,58 +56,212 @@
 
             <div class="content">
                 <div class="content-title clr">
-                    <div class="fl">
-                        <a href="#" class="active">登录</a>
-                    </div>
-                    <div class="fl">
-                        <a href="#">注册</a>
-                    </div>
+                    <div class="fl active login-btn">登录</div>
+                    <div class="fl register-btn"> 注册</div>
                     <div></div>
                 </div>
                 <div class="content-con">
                     <div class="clr">
 
                         <!-- 登录 -->
-                        <div id="login" class="fl" style="display: none;">
+                        <div id="login" class="fl">
                             <div class="login1 show">
                                 <form action="">
                                     <div class="input">
                                         <input type="text">
                                         <p>邮箱/手机号码/小米ID</p>
                                     </div>
-                                    <!-- <p class="p">请输入账号</p> -->
+                                    <p class="p">请输入账号</p>
                                     <div class="input">
                                         <input type="password">
                                         <span class="iconfont icon-yanjing1"></span>
                                         <p>密码</p>
                                     </div>
-                                    <!-- <p class="p">请输入登录密码</p> -->
+                                    <p class="p">请输入登录密码</p>
                                     <button type="submit">登录</button>
                                 </form>
                                 <div class="clr">
                                     <div class="fl">忘记密码?</div>
-                                    <div class="fr">手机号登陆</div>
+                                    <div class="fr login-phone">手机号登陆</div>
                                 </div>
                             </div>
                             <div class="login2">
                                 <form action="">
                                     <div class="input phone">
-                                        <div class="country fl">
+                                        <div>
                                             <div>
                                                 <p>国家码</p>
                                                 <p>+86</p>
                                             </div>
                                             <span class="glyphicon glyphicon-menu-down"></span>
+                                            <div class="country">
+                                                <div>
+                                                    <input type="text" value="搜索国家/地区名称">
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </div>
+                                                <div>
+                                                    <div>A</div>
+                                                    <ul>
+                                                        <li>
+                                                            <div>阿富汗</div>
+                                                            <div>+93</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>阿尔巴尼亚</div>
+                                                            <div>+355</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>阿尔及利亚</div>
+                                                            <div>+213</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>美属萨摩亚</div>
+                                                            <div>+1</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>安道尔</div>
+                                                            <div>+376</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>安哥拉</div>
+                                                            <div>+244</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>安圭拉</div>
+                                                            <div>+1</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>南极洲</div>
+                                                            <div>+672</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>安提瓜和巴布达</div>
+                                                            <div>+1</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>阿根廷</div>
+                                                            <div>+54</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>亚美尼亚</div>
+                                                            <div>+374</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>阿鲁巴</div>
+                                                            <div>+297</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>澳大利亚</div>
+                                                            <div>+61</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>奥地利</div>
+                                                            <div>+43</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>阿塞拜疆</div>
+                                                            <div>+994</div>
+                                                        </li>
+                                                    </ul>
+                                                    <div>B</div>
+                                                    <ul>
+                                                        <li>
+                                                            <div>巴哈马</div>
+                                                            <div>+1</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>巴林</div>
+                                                            <div>+973</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>孟加拉国</div>
+                                                            <div>+880</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>巴巴多斯</div>
+                                                            <div>+1</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>白俄罗斯</div>
+                                                            <div>+375</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>比利时</div>
+                                                            <div>+32</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>伯利兹</div>
+                                                            <div>+501</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>贝宁</div>
+                                                            <div>+229</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>百慕大</div>
+                                                            <div>+1</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>不丹</div>
+                                                            <div>+975</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>玻利维亚</div>
+                                                            <div>+591</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>荷兰加勒比区</div>
+                                                            <div>+599</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>波斯尼亚和黑塞哥维那</div>
+                                                            <div>+387</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>博茨瓦纳</div>
+                                                            <div>+267</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>巴西</div>
+                                                            <div>+55</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>英属印度洋领地</div>
+                                                            <div>+246</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>英属维尔京群岛</div>
+                                                            <div>+1</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>文莱</div>
+                                                            <div>+673</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>保加利亚</div>
+                                                            <div>+359</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>布基纳法索</div>
+                                                            <div>+226</div>
+                                                        </li>
+                                                        <li>
+                                                            <div>布隆迪</div>
+                                                            <div>+257</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                         <input type="text">
                                         <p>手机号码</p>
                                     </div>
-                                    <!-- <p class="p">请输入手机号</p> -->
+                                    <p class="p">请输入手机号</p>
                                     <p>未注册的手机号验证后将自动创建小米帐号</p>
                                     <button type="submit">下一步</button>
                                 </form>
                                 <div class="clr">
-                                    <div class="fr">密码登陆</div>
+                                    <div class="fr login-password">密码登陆</div>
                                 </div>
                             </div>
                             <div class="other">
@@ -139,25 +294,18 @@
                         <!-- 注册 -->
                         <div id="register" class="fl">
                             <form action="">
-                                <div class="input"></div>
-                                <div class="input phone">
-                                    <div class="country fl">
-                                        <div>
-                                            <p>国家码</p>
-                                            <p>+86</p>
-                                        </div>
-                                        <span class="glyphicon glyphicon-menu-down"></span>
-                                    </div>
-                                    <input type="text">
-                                    <p>手机号码</p>
-                                </div>
                                 <div class="input">
                                     <input type="text">
-                                    <p>短信验证码</p>
-                                    <div class="captcha">获取验证码</div>
+                                    <p>用户名</p>
                                 </div>
-                                <!-- <p class="p">请输入短信验证码</p> -->
-                                <button type="submit"></button>
+                                <p class="p">请输入用户名</p>
+                                <div class="input">
+                                    <input type="password">
+                                    <span class="iconfont icon-yanjing1"></span>
+                                    <p>密码</p>
+                                </div>
+                                <p class="p">请输入密码</p>
+                                <button type="submit">注册</button>
                             </form>
                             <div class="other">
                                 <p>其他方式登录</p>

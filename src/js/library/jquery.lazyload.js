@@ -13,8 +13,6 @@
  *
  */
 
-import { $ } from "./jquery.js";
-
 (function ($, window, document, undefined) {
     var $window = $(window);
 

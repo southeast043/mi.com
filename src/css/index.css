@@ -813,6 +813,7 @@ body {
   text-align: left;
   color: #000;
   margin-top: 30px;
+  width: 100px;
 }
 .content .appliance .cont > :nth-child(2) > :last-child > div > div > p,
 .content .appliance .cont > :nth-child(3) > :last-child > div > div > p {

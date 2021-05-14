@@ -177,9 +177,39 @@ body {
   font-size: 17px;
 }
 .box .login .content .content-con > div .phone > input {
-  width: 220px;
+  width: 216px;
 }
 .box .login .content .content-con > div .phone > p {
+  left: 160px;
+}
+.box .login .content .content-con > div .bigphone {
+  display: flex;
+  cursor: pointer;
+  width: 360px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 10px 20px 0;
+  position: relative;
+}
+.box .login .content .content-con > div .bigphone > span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  color: #bbb;
+  transition: transform 0.4s;
+}
+.box .login .content .content-con > div .bigphone > div > :nth-child(1) {
+  font-size: 12px;
+  color: #aaa;
+}
+.box .login .content .content-con > div .bigphone > div > :nth-child(2) {
+  font-size: 17px;
+}
+.box .login .content .content-con > div .bigphone > input {
+  width: 216px;
+}
+.box .login .content .content-con > div .bigphone > p {
   left: 160px;
 }
 .box .login .content .content-con > div .country {
@@ -189,6 +219,7 @@ body {
   left: 0;
   display: none;
   z-index: 100;
+  border: 1px solid #ccc;
 }
 .box .login .content .content-con > div .country > :nth-child(1) {
   width: 356px;
@@ -251,6 +282,10 @@ body {
   line-height: 60px;
   text-align: center;
   border: none;
+  transition: opacity 0.3s;
+}
+.box .login .content .content-con > div button:hover {
+  opacity: 0.3;
 }
 .box .login .content .content-con > div .p {
   color: #f04645 !important;
@@ -304,6 +339,17 @@ body {
 .box .login .content .content-con > div #register {
   width: 360px;
   margin-left: 360px;
+}
+.box .login .content .content-con > div #register .captcha {
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  top: 0;
+  right: 0;
+  line-height: 60px;
+  color: #ff5c00;
+  text-align: center;
+  cursor: pointer;
 }
 .box .login .content .content-con > div .other {
   margin-top: 80px;

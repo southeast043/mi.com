@@ -102,25 +102,48 @@ $(function () {
     })
 
     // 国家
-    $('.phone>:first').on('click', function () {
-        if ($('.country').css('display') == 'none') {
-            $('.country').css('display', 'block');
-        } else if ($('.country').css('display') == 'block') {
-            $('.country').css('display', 'none');
+    $('.phone>:nth-child(1)').on('click', function () {
+        if ($(this).children('.country').css('display') == 'none') {
+            $(this).children('.country').css('display', 'block');
+            $(this).children('span').css('transform', 'rotateZ(180deg)')
+        } else if ($(this).children('.country').css('display') == 'block') {
+            $(this).children('.country').css('display', 'none');
+            $(this).children('span').css('transform', 'rotateZ(0deg)')
+        }
+    })
+    $('.bigphone').on('click', function () {
+        if ($(this).children('.country').css('display') == 'none') {
+            $(this).children('.country').css('display', 'block');
+            $(this).children('span').css('transform', 'rotateZ(180deg)')
+        } else if ($(this).children('.country').css('display') == 'block') {
+            $(this).children('.country').css('display', 'none');
+            $(this).children('span').css('transform', 'rotateZ(0deg)')
         }
     })
 
+
     // 按钮
-    $('button').on('mouseover', function () {
-        $(this).stop().animate({
-            'opacity': '0.3'
-        }, 300)
 
-        $(this).on('mouseout', function () {
-            $(this).stop().animate({
+    $('button').attr('disabled', true);
+
+    $("input").change(function () {
+
+        let input = $(this).parent().parent().find('input')
+        let i = 1;
+
+        input.each(elm => {
+            if (!$(input[elm]).val()) i = 0;
+        });
+
+        if (i) {
+            $(this).parent().parent().find('button').attr('disabled', false).stop().animate({
+                'opacity': '1'
+            }), 300;
+        } else {
+            $(this).parent().parent().find('button').attr('disabled', true).stop().animate({
                 'opacity': '0.5'
-            }, 300)
+            }), 300;
+        }
+    });
 
-        })
-    })
 })

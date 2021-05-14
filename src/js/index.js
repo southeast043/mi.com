@@ -3,6 +3,60 @@ import { header } from "../js/library/header.js";
 import { footer } from "../js/library/footer.js";
 import "../js/library/jquery.lazyload.js"
 
+$.ajax({
+    type: "get",
+    url: "../../interface/getData.php",
+    dataType: "json",
+    success: function (res) {
+
+        let temp = '';
+
+        res.forEach((elm, i) => {
+            let id = (elm.id)
+            let type = JSON.parse(elm.type);
+            let home = JSON.parse(elm.home);
+
+            if (id != 8) {
+                let del = '';
+                if (type[0].oldprice) {
+                    del = `<del>${type[0].oldprice}元</del>`;
+                }
+
+                temp += `
+                <a href="#">
+                <div>
+                    <img class="lazy" data-original="../${home[0].src}" alt="">
+                    <h2>${elm.title}</h2>
+                    <p>${home[0].intro}</p>
+                    <p><span>${type[0].price}元</span>${del}</p>
+                </div>
+            </a>`;
+            } else if (id == 8) {
+                temp += `
+                <a href="#">
+                    <div>
+                        <div>
+                            <h3>${elm.title}</h3>
+                            <p>${type[0].price}元</p>
+                            <img class="lazy" data-original="../${home[0].src}" alt="">
+                        </div>
+                        <div>
+                            <div class="fl">
+                                <h2>浏览更多</h2>
+                                <p>热门</p>
+                            </div>
+                            <span class="iconfont icon-jiantou fr"></span>
+                        </div>
+                    </div>
+                </a>`;
+            }
+
+        });
+
+        $('.appliance>.cont>:nth-child(2)').html(temp);
+    }
+});
+
 $(function () {
 
     $("img.lazy").lazyload({
@@ -57,7 +111,6 @@ $(function () {
         if (index != -1) {
             next();
         } else if (index == -1) {
-            console.log(1)
             left = 0;
             box.stop().animate({
                 'left': left

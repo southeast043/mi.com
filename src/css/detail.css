@@ -486,6 +486,7 @@ body {
   font-size: 14px;
   color: #b0b0b0;
   margin-top: 8px;
+  width: 550px;
 }
 .content .content-right > :nth-child(3) {
   font-size: 14px;

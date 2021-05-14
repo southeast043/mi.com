@@ -23,17 +23,17 @@ $.ajax({
                 }
 
                 temp += `
-                <a href="#">
+                <a href="./detail.html?id=${elm.id}">
                 <div>
                     <img class="lazy" data-original="../${home[0].src}" alt="">
                     <h2>${elm.title}</h2>
                     <p>${home[0].intro}</p>
                     <p><span>${type[0].price}元</span>${del}</p>
                 </div>
-            </a>`;
+                </a>`;
             } else if (id == 8) {
                 temp += `
-                <a href="#">
+                <a href="./detail.html?id=${elm.id}">
                     <div>
                         <div>
                             <h3>${elm.title}</h3>

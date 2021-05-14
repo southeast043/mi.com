@@ -93,6 +93,76 @@
     }
 }
 
+// 弹出层
+.shopjump {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    display: none;
+
+    >div {
+        position: fixed;
+        width: 480px;
+        height: 270px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        display: none;
+
+        >:nth-child(1) {
+            height: 190px;
+            font-size: 26px;
+            text-align: center;
+            line-height: 190px;
+        }
+
+        >:nth-child(2) {
+            height: 80px;
+            padding: 20px 0;
+            background-color: #f5f5f5;
+
+            >a {
+                width: 160px;
+                height: 40px;
+                display: block;
+                background-color: #ff6700;
+                color: #fff;
+                margin: 0 auto;
+                text-align: center;
+                line-height: 40px;
+            }
+        }
+
+        .remove {
+            text-align: center;
+            font-size: 24px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+
+            >a {
+                display: block;
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+                border-radius: 50%;
+                transition: all 0.2s;
+                color: #757575;
+                font-size: 24px;
+
+            }
+
+            >a:hover {
+                background-color: #e53953;
+                color: #fff;
+            }
+        }
+    }
+}
+
 // 内容
 .content {
     background-color: #f5f5f5;
@@ -114,9 +184,25 @@
                 .select {
                     width: 110px;
 
+                    .active {
+                        color: #fff !important;
+                        background-color: #ff6700 !important;
+                    }
+
                     >span {
                         margin-left: 24px;
                         margin-right: 15px;
+                        width: 20px;
+                        height: 20px;
+                        text-align: center;
+                        line-height: 20px;
+                        border: 1px solid#ccc;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+
+                    >span:hover {
+                        color: #aaa;
                     }
                 }
 
@@ -161,9 +247,25 @@
                     .select {
                         width: 110px;
 
+                        .active {
+                            color: #fff !important;
+                            background-color: #ff6700 !important;
+                        }
+
                         >span {
                             margin-left: 24px;
                             margin-right: 15px;
+                            width: 20px;
+                            height: 20px;
+                            text-align: center;
+                            line-height: 20px;
+                            border: 1px solid#ccc;
+                            color: #fff;
+                            cursor: pointer;
+                        }
+
+                        >span:hover {
+                            color: #aaa;
                         }
                     }
 
@@ -207,6 +309,7 @@
                                     transition: all 0.2s;
                                     position: relative;
                                     top: -1px;
+                                    cursor: pointer;
                                 }
                             }
 
@@ -403,8 +506,9 @@
                     background-color: #ff6700;
                 }
             }
-            >div:hover{
-                >a{
+
+            >div:hover {
+                >a {
                     bottom: 15px;
                 }
             }

@@ -18,6 +18,20 @@
 
 <body>
 
+    <!-- 弹出层 -->
+    <div class="shopjump">
+        <div class="more">
+            <div>商品加入购物车数量超过限购数</div>
+            <div><a href="#">确定</a></div>
+            <span class="remove"><a href="#">&times;</a></span>
+        </div>
+        <div class="less">
+            <div>修改数量不能小于0</div>
+            <div><a href="#">确定</a></div>
+            <span class="remove"><a href="#">&times;</a></span>
+        </div>
+    </div>
+
     <!-- 头部 -->
     <div class="header">
         <div class="header-c clr">
@@ -51,7 +65,7 @@
         <div class="content-c">
             <div class="content-top">
                 <div class="con-title">
-                    <div class="select"><span class="glyphicon glyphicon-ok"></span>全选</div>
+                    <div class="select"><span class="glyphicon glyphicon-ok" data-id="0"></span>全选</div>
                     <div class="img"></div>
                     <div class="name">
                         商品名称
@@ -70,7 +84,7 @@
                     </div>
                 </div>
                 <div class="con-content">
-                    <div>
+                    <!-- <div>
                         <div class="select"><span class="glyphicon glyphicon-ok"></span></div>
                         <div class="img">
                             <img src="../img/shoppingCart-1.jpg" alt="">
@@ -120,298 +134,295 @@
                             <a href="#">&times;</a>
                         </div>
                     </div>
+                </div> -->
+                </div>
+                <div class="content-bottom">
+                    <div>
+                        <div>
+                            <a href="./index.html">
+                                继续购物
+                            </a>
+                        </div>
+                        <div class="num">
+                            共 <span>0</span> 件商品，已选择 <span>0</span> 件
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sum">
+                            合计： <span>0</span> 元
+                        </div>
+                        <div>
+                            <a href="#">去结算</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="content-bottom">
+        </div>
+
+        <!-- 推荐 -->
+        <div class="recommend">
+            <div class="recommend-c">
                 <div>
+                    <span></span>
+                    <h2>买购物车中商品的人还买了</h2>
+                    <span></span>
+                </div>
+                <div>
+                    <div>
+                        <img src="../img/recommend-1.webp" alt="">
+                        <p>小米11 Ultra</p>
+                        <p>5999元</p>
+                        <p>4.3万人好评</p>
+                        <a href="#">加入购物车</a>
+                    </div>
+                    <div>
+                        <img src="../img/recommend-2.webp" alt="">
+                        <p>小米超大双料鼠标垫</p>
+                        <p>49元</p>
+                        <p>3.1万人好评</p>
+                        <a href="#">加入购物车</a>
+                    </div>
+                    <div>
+                        <img src="../img/recommend-3.webp" alt="">
+                        <p>小米80W无线充电座套装</p>
+                        <p>499元</p>
+                        <p>3.3万人好评</p>
+                        <a href="#">加入购物车</a>
+                    </div>
+                    <div>
+                        <img src="../img/recommend-4.webp" alt="">
+                        <p>米家电水壶1A</p>
+                        <p>79元</p>
+                        <p>23.4万人好评</p>
+                        <a href="#">加入购物车</a>
+                    </div>
+                    <div>
+                        <img src="../img/recommend-5.webp" alt="">
+                        <p>Redmi充电宝 20000mAh</p>
+                        <p>99元</p>
+                        <p>52.1万人好评</p>
+                        <a href="#">加入购物车</a>
+                    </div>
+                    <div>
+                        <img src="../img/recommend-6.webp" alt="">
+                        <p>小米米家智能墙壁插座</p>
+                        <p>59元</p>
+                        <p>1.8万人好评</p>
+                        <a href="#">加入购物车</a>
+                    </div>
+                    <div>
+                        <img src="../img/recommend-7.webp" alt="">
+                        <p>米家手持挂烫机</p>
+                        <p>109元</p>
+                        <p>10.6万人好评</p>
+                        <a href="#">加入购物车</a>
+                    </div>
+                    <div>
+                        <img src="../img/recommend-8.webp" alt="">
+                        <p>小米移动电源3 20000mAh USB-C双向快充版</p>
+                        <p>129元</p>
+                        <p>17.7万人好评</p>
+                        <a href="#">加入购物车</a>
+                    </div>
+                    <div>
+                        <img src="../img/recommend-9.webp" alt="">
+                        <p>小米多看电纸书</p>
+                        <p>599元</p>
+                        <p>2.9万人好评</p>
+                        <a href="#">加入购物车</a>
+                    </div>
+                    <div>
+                        <img src="../img/recommend-10.jpg" alt="">
+                        <p>18W USB充电器快充版</p>
+                        <p>29.9元</p>
+                        <p>71.8万人好评</p>
+                        <a href="#">加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 服务 -->
+        <div class="service">
+            <ul class="service-title">
+                <li>
+                    <a href="#">
+                        <span class="iconfont icon-banshou"></span>
+                        预约维修服务
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="iconfont icon-sevenday-copy"></span>
+                        7天无理由退货
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="iconfont icon-15tianwuliyoutuihuo"></span>
+                        15天免费换货
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="iconfont icon-liwu"></span>
+                        满69包邮
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="iconfont icon-Frame1"></span>
+                        520余家售后网点
+                    </a>
+                </li>
+            </ul>
+            <div class="service-content clr">
+                <div class="fl">
+                    <ul>
+                        <li>帮助中心</li>
+                        <li><a href="#">账户管理</a></li>
+                        <li><a href="#">购物指南</a></li>
+                        <li><a href="#">订单操作</a></li>
+                    </ul>
+                    <ul>
+                        <li>服务支持</li>
+                        <li><a href="#">售后政策</a></li>
+                        <li><a href="#">自助服务</a></li>
+                        <li><a href="#">相关下载</a></li>
+                    </ul>
+                    <ul>
+                        <li>线下门店</li>
+                        <li><a href="#">小米之家</a></li>
+                        <li><a href="#">服务网点</a></li>
+                        <li><a href="#">授权体验店</a></li>
+                    </ul>
+                    <ul>
+                        <li>关于小米</li>
+                        <li><a href="#">了解小米</a></li>
+                        <li><a href="#">加入小米</a></li>
+                        <li><a href="#">投资者关系</a></li>
+                        <li><a href="#">企业社会责任</a></li>
+                        <li><a href="#">廉洁举报</a></li>
+                    </ul>
+                    <ul>
+                        <li>关注我们</li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">官方微信</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">公益基金会</a></li>
+                    </ul>
+                    <ul>
+                        <li>特色服务</li>
+                        <li><a href="#">F码通道</a></li>
+                        <li><a href="#">礼物码</a></li>
+                        <li><a href="#">防伪查询</a></li>
+                    </ul>
+                </div>
+                <div class="fr">
+                    <h2>400-100-5678</h2>
+                    <p>8:00-18:00 (仅收市话费)</p>
                     <div>
                         <a href="#">
-                            继续购物
+                            <span class="iconfont icon-qipao"></span>
+                            人工客服
                         </a>
                     </div>
-                    <div>
-                        共 <span>2</span> 件商品，已选择 <span>2</span> 件
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        合计： <span>185.9</span> 元
-                    </div>
-                    <div>
-                        <a href="#">去结算</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- 推荐 -->
-    <div class="recommend">
-        <div class="recommend-c">
-            <div>
-                <span></span>
-                <h2>买购物车中商品的人还买了</h2>
-                <span></span>
-            </div>
-            <div>
-                <div>
-                    <img src="../img/recommend-1.webp" alt="">
-                    <p>小米11 Ultra</p>
-                    <p>5999元</p>
-                    <p>4.3万人好评</p>
-                    <a href="#">加入购物车</a>
-                </div>
-                <div>
-                    <img src="../img/recommend-2.webp" alt="">
-                    <p>小米超大双料鼠标垫</p>
-                    <p>49元</p>
-                    <p>3.1万人好评</p>
-                    <a href="#">加入购物车</a>
-                </div>
-                <div>
-                    <img src="../img/recommend-3.webp" alt="">
-                    <p>小米80W无线充电座套装</p>
-                    <p>499元</p>
-                    <p>3.3万人好评</p>
-                    <a href="#">加入购物车</a>
-                </div>
-                <div>
-                    <img src="../img/recommend-4.webp" alt="">
-                    <p>米家电水壶1A</p>
-                    <p>79元</p>
-                    <p>23.4万人好评</p>
-                    <a href="#">加入购物车</a>
-                </div>
-                <div>
-                    <img src="../img/recommend-5.webp" alt="">
-                    <p>Redmi充电宝 20000mAh</p>
-                    <p>99元</p>
-                    <p>52.1万人好评</p>
-                    <a href="#">加入购物车</a>
-                </div>
-                <div>
-                    <img src="../img/recommend-6.webp" alt="">
-                    <p>小米米家智能墙壁插座</p>
-                    <p>59元</p>
-                    <p>1.8万人好评</p>
-                    <a href="#">加入购物车</a>
-                </div>
-                <div>
-                    <img src="../img/recommend-7.webp" alt="">
-                    <p>米家手持挂烫机</p>
-                    <p>109元</p>
-                    <p>10.6万人好评</p>
-                    <a href="#">加入购物车</a>
-                </div>
-                <div>
-                    <img src="../img/recommend-8.webp" alt="">
-                    <p>小米移动电源3 20000mAh USB-C双向快充版</p>
-                    <p>129元</p>
-                    <p>17.7万人好评</p>
-                    <a href="#">加入购物车</a>
-                </div>
-                <div>
-                    <img src="../img/recommend-9.webp" alt="">
-                    <p>小米多看电纸书</p>
-                    <p>599元</p>
-                    <p>2.9万人好评</p>
-                    <a href="#">加入购物车</a>
-                </div>
-                <div>
-                    <img src="../img/recommend-10.jpg" alt="">
-                    <p>18W USB充电器快充版</p>
-                    <p>29.9元</p>
-                    <p>71.8万人好评</p>
-                    <a href="#">加入购物车</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- 服务 -->
-    <div class="service">
-        <ul class="service-title">
-            <li>
-                <a href="#">
-                    <span class="iconfont icon-banshou"></span>
-                    预约维修服务
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="iconfont icon-sevenday-copy"></span>
-                    7天无理由退货
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="iconfont icon-15tianwuliyoutuihuo"></span>
-                    15天免费换货
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="iconfont icon-liwu"></span>
-                    满69包邮
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="iconfont icon-Frame1"></span>
-                    520余家售后网点
-                </a>
-            </li>
-        </ul>
-        <div class="service-content clr">
-            <div class="fl">
-                <ul>
-                    <li>帮助中心</li>
-                    <li><a href="#">账户管理</a></li>
-                    <li><a href="#">购物指南</a></li>
-                    <li><a href="#">订单操作</a></li>
-                </ul>
-                <ul>
-                    <li>服务支持</li>
-                    <li><a href="#">售后政策</a></li>
-                    <li><a href="#">自助服务</a></li>
-                    <li><a href="#">相关下载</a></li>
-                </ul>
-                <ul>
-                    <li>线下门店</li>
-                    <li><a href="#">小米之家</a></li>
-                    <li><a href="#">服务网点</a></li>
-                    <li><a href="#">授权体验店</a></li>
-                </ul>
-                <ul>
-                    <li>关于小米</li>
-                    <li><a href="#">了解小米</a></li>
-                    <li><a href="#">加入小米</a></li>
-                    <li><a href="#">投资者关系</a></li>
-                    <li><a href="#">企业社会责任</a></li>
-                    <li><a href="#">廉洁举报</a></li>
-                </ul>
-                <ul>
-                    <li>关注我们</li>
-                    <li><a href="#">新浪微博</a></li>
-                    <li><a href="#">官方微信</a></li>
-                    <li><a href="#">联系我们</a></li>
-                    <li><a href="#">公益基金会</a></li>
-                </ul>
-                <ul>
-                    <li>特色服务</li>
-                    <li><a href="#">F码通道</a></li>
-                    <li><a href="#">礼物码</a></li>
-                    <li><a href="#">防伪查询</a></li>
-                </ul>
-            </div>
-            <div class="fr">
-                <h2>400-100-5678</h2>
-                <p>8:00-18:00 (仅收市话费)</p>
-                <div>
-                    <a href="#">
-                        <span class="iconfont icon-qipao"></span>
-                        人工客服
-                    </a>
-                </div>
-                <p>
-                    关注小米
-                    <a href="#"><span class="iconfont icon-xinlang"></span></a>
-                    <a href="#">
-                        <span class="iconfont icon-weixin"></span>
-                        <img src="../img/wx-img.png" alt="">
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- 底部 -->
-    <div class="footer ">
-        <div class="footer-c">
-            <div>
-                <div class="footer-logo"><img src="../img/logo-mi.png" alt=""></div>
-                <div class="footer-content">
                     <p>
-                        <a href="#">小米商城</a>
-                        <span>|</span>
-                        <a href="#">MIUI</a>
-                        <span>|</span>
-                        <a href="#">米家</a>
-                        <span>|</span>
-                        <a href="#">米聊</a>
-                        <span>|</span>
-                        <a href="#">多看</a>
-                        <span>|</span>
-                        <a href="#">游戏</a>
-                        <span>|</span>
-                        <a href="#">政企服务</a>
-                        <span>|</span>
-                        <a href="#">小米天猫店</a>
-                        <span>|</span>
-                        <a href="#">小米集团隐私政策</a>
-                        <span>|</span>
-                        <a href="#">小米公司儿童信息保护规则</a>
-                        <span>|</span>
-                        <a href="#">小米商城隐私政策</a>
-                        <span>|</span>
-                        <a href="#">小米商城用户协议</a>
-                        <span>|</span>
-                        <a href="#">问题反馈</a>
-                        <span>|</span>
-                        <a href="#">Select Location</a>
-                        <br>
-                        <a href="#">北京互联网法院法律服务工作站</a>
-                        <span>|</span>
-                        <a href="#">中国消费者协会</a>
-                        <span>|</span>
-                        <a href="#">北京消费者协会</a>
+                        关注小米
+                        <a href="#"><span class="iconfont icon-xinlang"></span></a>
+                        <a href="#">
+                            <span class="iconfont icon-weixin"></span>
+                            <img src="../img/wx-img.png" alt="">
+                        </a>
                     </p>
-                    <p>
-                        &copy;
-                        <a href="#">mi.com</a>
-                        京ICP证110507号
-                        <a href="#">京ICP备10046444号</a>
-                        <a href="#">京公网安备11010802020134号</a>
-                        <a href="#">京网文[2020]0276-042号</a>
-                        <br>
-                        <a href="#">（京）网械平台备字（2018）第00005号</a>
-                        <a href="#">互联网药品信息服务资格证 (京)-非经营性-2014-0090</a>
-                        <a href="#">营业执照</a>
-                        <a href="#">医疗器械质量公告</a>
-                        <br>
-                        <a href="#">增值电信业务许可证</a>
-                        网络食品经营备案 京食药网食备202010048
-                        <a href="#">食品经营许可证</a>
-                        <br>
-                        违法和不良信息举报电话：171-5104-4404
-                        <a href="#">知识产权侵权投诉</a>
-                        本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
-                    </p>
-                    <div class="clr">
-                        <a href="#" class="fl">
-                            <img src="../img/footer-1.png" alt="">
-                        </a>
-                        <a href="#" class="fl">
-                            <img src="../img/footer-2.png" alt="">
-                        </a>
-                        <a href="#" class="fl">
-                            <img src="../img/footer-3.png" alt="">
-                        </a>
-                        <a href="#" class="fl">
-                            <img src="../img/footer-4.png" alt="">
-                        </a>
-                        <a href="#" class="fl">
-                            <img src="../img/footer-5-1.png" alt="">
-                            <img src="../img/footer-5-2.png" alt="" class="none">
-                        </a>
-                    </div>
                 </div>
             </div>
-            <div><img src="../img/footer.jpg" alt=""></div>
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer ">
+            <div class="footer-c">
+                <div>
+                    <div class="footer-logo"><img src="../img/logo-mi.png" alt=""></div>
+                    <div class="footer-content">
+                        <p>
+                            <a href="#">小米商城</a>
+                            <span>|</span>
+                            <a href="#">MIUI</a>
+                            <span>|</span>
+                            <a href="#">米家</a>
+                            <span>|</span>
+                            <a href="#">米聊</a>
+                            <span>|</span>
+                            <a href="#">多看</a>
+                            <span>|</span>
+                            <a href="#">游戏</a>
+                            <span>|</span>
+                            <a href="#">政企服务</a>
+                            <span>|</span>
+                            <a href="#">小米天猫店</a>
+                            <span>|</span>
+                            <a href="#">小米集团隐私政策</a>
+                            <span>|</span>
+                            <a href="#">小米公司儿童信息保护规则</a>
+                            <span>|</span>
+                            <a href="#">小米商城隐私政策</a>
+                            <span>|</span>
+                            <a href="#">小米商城用户协议</a>
+                            <span>|</span>
+                            <a href="#">问题反馈</a>
+                            <span>|</span>
+                            <a href="#">Select Location</a>
+                            <br>
+                            <a href="#">北京互联网法院法律服务工作站</a>
+                            <span>|</span>
+                            <a href="#">中国消费者协会</a>
+                            <span>|</span>
+                            <a href="#">北京消费者协会</a>
+                        </p>
+                        <p>
+                            &copy;
+                            <a href="#">mi.com</a>
+                            京ICP证110507号
+                            <a href="#">京ICP备10046444号</a>
+                            <a href="#">京公网安备11010802020134号</a>
+                            <a href="#">京网文[2020]0276-042号</a>
+                            <br>
+                            <a href="#">（京）网械平台备字（2018）第00005号</a>
+                            <a href="#">互联网药品信息服务资格证 (京)-非经营性-2014-0090</a>
+                            <a href="#">营业执照</a>
+                            <a href="#">医疗器械质量公告</a>
+                            <br>
+                            <a href="#">增值电信业务许可证</a>
+                            网络食品经营备案 京食药网食备202010048
+                            <a href="#">食品经营许可证</a>
+                            <br>
+                            违法和不良信息举报电话：171-5104-4404
+                            <a href="#">知识产权侵权投诉</a>
+                            本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+                        </p>
+                        <div class="clr">
+                            <a href="#" class="fl">
+                                <img src="../img/footer-1.png" alt="">
+                            </a>
+                            <a href="#" class="fl">
+                                <img src="../img/footer-2.png" alt="">
+                            </a>
+                            <a href="#" class="fl">
+                                <img src="../img/footer-3.png" alt="">
+                            </a>
+                            <a href="#" class="fl">
+                                <img src="../img/footer-4.png" alt="">
+                            </a>
+                            <a href="#" class="fl">
+                                <img src="../img/footer-5-1.png" alt="">
+                                <img src="../img/footer-5-2.png" alt="" class="none">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div><img src="../img/footer.jpg" alt=""></div>
+            </div>
         </div>
     </div>
 </body>

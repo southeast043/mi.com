@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,363 @@
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/register.css">
+    <script src="../js/register.js" type="module"></script>
     <title>小米账号-注册</title>
 </head>
-<body>
-    
 
+<body>
+    <div class="bg">
+        <div class="content">
+            <div class="logo"><img src="../img/logo-mi.png" alt=""></div>
+            <h4>注册小米账号</h4>
+            <form action="../../interface/register.php" method="POST">
+                <div class="countrybox">
+                    <p>国家/地区</p>
+                    <div>中国<span class="glyphicon glyphicon-menu-down"></span>
+                    </div>
+                    <div class="country">
+                        <div>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <div>A</div>
+                            <ul>
+                                <li>
+                                    <div>阿富汗</div>
+                                    <div>+93</div>
+                                </li>
+                                <li>
+                                    <div>阿尔巴尼亚</div>
+                                    <div>+355</div>
+                                </li>
+                                <li>
+                                    <div>阿尔及利亚</div>
+                                    <div>+213</div>
+                                </li>
+                                <li>
+                                    <div>美属萨摩亚</div>
+                                    <div>+1</div>
+                                </li>
+                                <li>
+                                    <div>安道尔</div>
+                                    <div>+376</div>
+                                </li>
+                                <li>
+                                    <div>安哥拉</div>
+                                    <div>+244</div>
+                                </li>
+                                <li>
+                                    <div>安圭拉</div>
+                                    <div>+1</div>
+                                </li>
+                                <li>
+                                    <div>南极洲</div>
+                                    <div>+672</div>
+                                </li>
+                                <li>
+                                    <div>安提瓜和巴布达</div>
+                                    <div>+1</div>
+                                </li>
+                                <li>
+                                    <div>阿根廷</div>
+                                    <div>+54</div>
+                                </li>
+                                <li>
+                                    <div>亚美尼亚</div>
+                                    <div>+374</div>
+                                </li>
+                                <li>
+                                    <div>阿鲁巴</div>
+                                    <div>+297</div>
+                                </li>
+                                <li>
+                                    <div>澳大利亚</div>
+                                    <div>+61</div>
+                                </li>
+                                <li>
+                                    <div>奥地利</div>
+                                    <div>+43</div>
+                                </li>
+                                <li>
+                                    <div>阿塞拜疆</div>
+                                    <div>+994</div>
+                                </li>
+                            </ul>
+                            <div>B</div>
+                            <ul>
+                                <li>
+                                    <div>巴哈马</div>
+                                    <div>+1</div>
+                                </li>
+                                <li>
+                                    <div>巴林</div>
+                                    <div>+973</div>
+                                </li>
+                                <li>
+                                    <div>孟加拉国</div>
+                                    <div>+880</div>
+                                </li>
+                                <li>
+                                    <div>巴巴多斯</div>
+                                    <div>+1</div>
+                                </li>
+                                <li>
+                                    <div>白俄罗斯</div>
+                                    <div>+375</div>
+                                </li>
+                                <li>
+                                    <div>比利时</div>
+                                    <div>+32</div>
+                                </li>
+                                <li>
+                                    <div>伯利兹</div>
+                                    <div>+501</div>
+                                </li>
+                                <li>
+                                    <div>贝宁</div>
+                                    <div>+229</div>
+                                </li>
+                                <li>
+                                    <div>百慕大</div>
+                                    <div>+1</div>
+                                </li>
+                                <li>
+                                    <div>不丹</div>
+                                    <div>+975</div>
+                                </li>
+                                <li>
+                                    <div>玻利维亚</div>
+                                    <div>+591</div>
+                                </li>
+                                <li>
+                                    <div>荷兰加勒比区</div>
+                                    <div>+599</div>
+                                </li>
+                                <li>
+                                    <div>波斯尼亚和黑塞哥维那</div>
+                                    <div>+387</div>
+                                </li>
+                                <li>
+                                    <div>博茨瓦纳</div>
+                                    <div>+267</div>
+                                </li>
+                                <li>
+                                    <div>巴西</div>
+                                    <div>+55</div>
+                                </li>
+                                <li>
+                                    <div>英属印度洋领地</div>
+                                    <div>+246</div>
+                                </li>
+                                <li>
+                                    <div>英属维尔京群岛</div>
+                                    <div>+1</div>
+                                </li>
+                                <li>
+                                    <div>文莱</div>
+                                    <div>+673</div>
+                                </li>
+                                <li>
+                                    <div>保加利亚</div>
+                                    <div>+359</div>
+                                </li>
+                                <li>
+                                    <div>布基纳法索</div>
+                                    <div>+226</div>
+                                </li>
+                                <li>
+                                    <div>布隆迪</div>
+                                    <div>+257</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>成功注册帐号后，国家/地区将不能被修改</p>
+                </div>
+                <div class="phonenumber">
+                    <p>手机号码</p>
+                    <div>
+                        <div>+86<span class="glyphicon glyphicon-menu-down"></span></div>
+                        <div class="country">
+                            <div>
+                                <input type="text" value="搜索国家/地区名称">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </div>
+                            <div>
+                                <div>A</div>
+                                <ul>
+                                    <li>
+                                        <div>阿富汗</div>
+                                        <div>+93</div>
+                                    </li>
+                                    <li>
+                                        <div>阿尔巴尼亚</div>
+                                        <div>+355</div>
+                                    </li>
+                                    <li>
+                                        <div>阿尔及利亚</div>
+                                        <div>+213</div>
+                                    </li>
+                                    <li>
+                                        <div>美属萨摩亚</div>
+                                        <div>+1</div>
+                                    </li>
+                                    <li>
+                                        <div>安道尔</div>
+                                        <div>+376</div>
+                                    </li>
+                                    <li>
+                                        <div>安哥拉</div>
+                                        <div>+244</div>
+                                    </li>
+                                    <li>
+                                        <div>安圭拉</div>
+                                        <div>+1</div>
+                                    </li>
+                                    <li>
+                                        <div>南极洲</div>
+                                        <div>+672</div>
+                                    </li>
+                                    <li>
+                                        <div>安提瓜和巴布达</div>
+                                        <div>+1</div>
+                                    </li>
+                                    <li>
+                                        <div>阿根廷</div>
+                                        <div>+54</div>
+                                    </li>
+                                    <li>
+                                        <div>亚美尼亚</div>
+                                        <div>+374</div>
+                                    </li>
+                                    <li>
+                                        <div>阿鲁巴</div>
+                                        <div>+297</div>
+                                    </li>
+                                    <li>
+                                        <div>澳大利亚</div>
+                                        <div>+61</div>
+                                    </li>
+                                    <li>
+                                        <div>奥地利</div>
+                                        <div>+43</div>
+                                    </li>
+                                    <li>
+                                        <div>阿塞拜疆</div>
+                                        <div>+994</div>
+                                    </li>
+                                </ul>
+                                <div>B</div>
+                                <ul>
+                                    <li>
+                                        <div>巴哈马</div>
+                                        <div>+1</div>
+                                    </li>
+                                    <li>
+                                        <div>巴林</div>
+                                        <div>+973</div>
+                                    </li>
+                                    <li>
+                                        <div>孟加拉国</div>
+                                        <div>+880</div>
+                                    </li>
+                                    <li>
+                                        <div>巴巴多斯</div>
+                                        <div>+1</div>
+                                    </li>
+                                    <li>
+                                        <div>白俄罗斯</div>
+                                        <div>+375</div>
+                                    </li>
+                                    <li>
+                                        <div>比利时</div>
+                                        <div>+32</div>
+                                    </li>
+                                    <li>
+                                        <div>伯利兹</div>
+                                        <div>+501</div>
+                                    </li>
+                                    <li>
+                                        <div>贝宁</div>
+                                        <div>+229</div>
+                                    </li>
+                                    <li>
+                                        <div>百慕大</div>
+                                        <div>+1</div>
+                                    </li>
+                                    <li>
+                                        <div>不丹</div>
+                                        <div>+975</div>
+                                    </li>
+                                    <li>
+                                        <div>玻利维亚</div>
+                                        <div>+591</div>
+                                    </li>
+                                    <li>
+                                        <div>荷兰加勒比区</div>
+                                        <div>+599</div>
+                                    </li>
+                                    <li>
+                                        <div>波斯尼亚和黑塞哥维那</div>
+                                        <div>+387</div>
+                                    </li>
+                                    <li>
+                                        <div>博茨瓦纳</div>
+                                        <div>+267</div>
+                                    </li>
+                                    <li>
+                                        <div>巴西</div>
+                                        <div>+55</div>
+                                    </li>
+                                    <li>
+                                        <div>英属印度洋领地</div>
+                                        <div>+246</div>
+                                    </li>
+                                    <li>
+                                        <div>英属维尔京群岛</div>
+                                        <div>+1</div>
+                                    </li>
+                                    <li>
+                                        <div>文莱</div>
+                                        <div>+673</div>
+                                    </li>
+                                    <li>
+                                        <div>保加利亚</div>
+                                        <div>+359</div>
+                                    </li>
+                                    <li>
+                                        <div>布基纳法索</div>
+                                        <div>+226</div>
+                                    </li>
+                                    <li>
+                                        <div>布隆迪</div>
+                                        <div>+257</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="text" name="phone" value="请输入手机号码">
+                    </div>
+                    <p class="error">手机号码格式错误</p>
+                    <p class="none">请输入手机号码</p>
+                </div>
+                <button type="submit">注册</button>
+            </form>
+            <p>已阅读并同意：小米 <span>用户协议</span> 和 <span>隐私政策</span> </p>
+        </div>
+        <div class="footer">
+            <p>
+                <a href="#" class="active">简体</a>
+                <span>|</span>
+                <a href="#">繁体</a>
+                <span>|</span>
+                <a href="#">English</a>
+                <span>|</span>
+                <a href="#">常见问题</a>
+            </p>
+            <p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+        </div>
+    </div>
 </body>
+
 </html>

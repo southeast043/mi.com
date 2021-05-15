@@ -16,75 +16,83 @@
 
 // 轮播图
 
-.carousel {
+.slideshow {
     width: 1226px;
     height: 460px;
     margin: 0 auto;
     position: relative;
 
-    .container-fluid {
-        width: 100%;
-        padding: 0;
-
-        .left {
-            left: 234px;
-
-            >div {
-                width: 41px;
-                height: 69px;
-                background: url(../img/icon-slides.png) no-repeat -85px 0;
-                opacity: 0.6;
-                position: absolute;
-                top: 212px;
-                left: 234px;
-            }
-
-            >div:hover {
-                background: url(../img/icon-slides.png) no-repeat 0 0;
-            }
+    .slideshow-indicators{
+        position: absolute;
+        z-index: 100;
+        width: 100px;
+        height: 6px;
+        display: flex;
+        justify-content: space-between;
+        right: 20px;
+        bottom: 30px;
+        .active{
+            background-color: rgba(255,255,255,0.4);
         }
-
-        .right {
-            >div {
-                width: 41px;
-                height: 69px;
-                background: url(../img/icon-slides.png) no-repeat -126px 0;
-                opacity: 0.6;
-                position: absolute;
-                top: 212px;
-                right: 0;
-            }
-
-            >div:hover {
-                background: url(../img/icon-slides.png) no-repeat -41px 0;
-            }
-        }
-
-        .carousel-indicators {
-            width: 200px;
-            margin: 0;
-            left: 85%;
-            bottom: 20px;
-
-            .active {
-                background: rgba(255, 255, 255, 0.6);
-                border-color: rgb(146, 146, 146);
-            }
-
-            >li {
-                background: rgb(146, 146, 146);
-                border-color: rgb(179, 179, 179);
-                margin: 2px;
-
-            }
-
-            >li:hover {
-                background: rgba(255, 255, 255, 0.6);
-                border-color: rgb(146, 146, 146);
-            }
+        >li{
+            width: 12px;
+            height: 12px;
+            background-color: rgba(0,0,0,0.4);
+            border:2px solid #999;
+            margin: 0 4px;
+            border-radius: 50%;
+            cursor: pointer;
         }
     }
 
+    .slideshow-inner {
+        width: 1226px;
+        height: 460px;
+        margin: 0 auto;
+        position: relative;
+
+        .show {
+            opacity: 1;
+        }
+
+        >img {
+            width: 1226px;
+            height: 460px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+    }
+
+    .slideshow-controls {
+        width: 41px;
+        height: 69px;
+        opacity: 0.6;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .left-btn {
+        background: url(../img/icon-slides.png) no-repeat -85px 0;
+        top: 212px;
+        left: 234px;
+    }
+
+    .left-btn:hover {
+        background: url(../img/icon-slides.png) no-repeat 0 0;
+    }
+
+    .right-btn {
+        background: url(../img/icon-slides.png) no-repeat -126px 0;
+        top: 212px;
+        right: 0;
+    }
+
+    .right-btn:hover {
+        background: url(../img/icon-slides.png) no-repeat -41px 0;
+    }
 }
 
 .banner-ad {

@@ -263,6 +263,7 @@ body {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  background-color: #fff;
 }
 .box .login .content .content-con > div .country > :nth-child(2) > ul > li > div {
   font-size: 17px;

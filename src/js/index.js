@@ -1,4 +1,5 @@
 import { $ } from "../js/library/jquery.js";
+import { slideshow } from "../js/library/slideshow.js";
 import { header } from "../js/library/header.js";
 import { footer } from "../js/library/footer.js";
 import "../js/library/jquery.lazyload.js"
@@ -12,6 +13,7 @@ $.ajax({
         let temp = '';
 
         res.forEach((elm, i) => {
+
             let id = (elm.id)
             let type = JSON.parse(elm.type);
             let home = JSON.parse(elm.home);
@@ -54,18 +56,21 @@ $.ajax({
         });
 
         $('.appliance>.cont>:nth-child(2)').html(temp);
+
+        $("img.lazy").lazyload({
+            effect: "fadeIn",
+            threshold: 0
+        });
     }
 });
 
 $(function () {
 
-    $("img.lazy").lazyload({
-        effect: "fadeIn",
-        threshold: 0
-    });
-
     // 头部
     header;
+
+    // 轮播图
+    slideshow;
 
     // 秒杀
 
@@ -118,6 +123,42 @@ $(function () {
             index = 0;
         }
     }, 5000);
+
+    $('.sekill-title>p>span').on('mouseover', function () {
+        clearInterval(timmer);
+    })
+
+    $('.sekill-title>p>span').on('mouseout', function () {
+        timmer = setInterval(function () {
+            if (index != -1) {
+                next();
+            } else if (index == -1) {
+                left = 0;
+                box.stop().animate({
+                    'left': left
+                }, 1000);
+                index = 0;
+            }
+        }, 5000);
+    })
+
+    box.on('mouseover', function () {
+        clearInterval(timmer);
+    })
+
+    box.on('mouseout', function () {
+        timmer = setInterval(function () {
+            if (index != -1) {
+                next();
+            } else if (index == -1) {
+                left = 0;
+                box.stop().animate({
+                    'left': left
+                }, 1000);
+                index = 0;
+            }
+        }, 5000);
+    })
 
     // 倒计时
     let day = new Date(9999, 1, 1, 0, 0, 0); // 未来时间

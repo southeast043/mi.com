@@ -1,4 +1,5 @@
 import { $ } from "../js/library/jquery.js";
+import { slideshow } from "../js/library/slideshow.js";
 import { header } from "../js/library/header.js";
 import { footer } from "../js/library/footer.js";
 import cookie from './library/cookie.js';
@@ -14,7 +15,7 @@ $.ajax({
     dataType: "json",
     success: function (res) {
         let detailpicture = JSON.parse(res.detailpicture);
-        let slideshow = JSON.parse(res.slideshow);
+        let slideshowimg = JSON.parse(res.slideshow);
         let type = JSON.parse(res.type);
 
         let title = `
@@ -26,16 +27,19 @@ $.ajax({
 
         let contentLeft = '';
 
-        slideshow.forEach((elm, i) => {
-            contentLeft += `
-            <div class="item">
-                <img src="../${elm.src}" alt="...">
-            </div>
+        slideshowimg.forEach((elm, i) => {
+            if (!i) {
+                contentLeft += `
+                <img src="../${elm.src}" alt="..." class="show">
             `;
+            } else {
+                contentLeft += `
+                <img src="../${elm.src}" alt="...">
+            `;
+            }
         })
 
-        $('.carousel-inner').html(contentLeft);
-        $('.carousel-inner>:nth-child(1)').addClass('active');
+        $('.slideshow-inner').html(contentLeft);
 
         let del = '';
 
@@ -134,6 +138,7 @@ $.ajax({
         })
 
         $('.detail').prepend(detail);
+        slideshow;
     }
 });
 

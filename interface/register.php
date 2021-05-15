@@ -12,13 +12,24 @@
 
     if($result->num_rows>0){
         echo '<script>alert("用户已存在");</script>';
-        echo '<script>location.href="../src/html/login.html"</script>';
+
+        if($password){
+            echo '<script>location.href="../src/html/login.html"</script>';
+        }else{
+            echo '<script>location.href="../src/html/register.html"</script>';
+        }
+
         $mysqli->close(); // 断开连接
         die(); // 终止代码执行
     }
 
     // 插入数据
-    $insert = "insert into user_info (username,phone,password) values ('$phone','$phone','$password')";
+
+    if($password){
+        $insert = "insert into user_info (username,phone,password) values ('$phone','$phone','$password')";
+    }else{
+        $insert = "insert into user_info (username,phone,password) values ('$phone','$phone','$phonef')";
+    }
 
     // 执行插入操作时 返回一个布尔值 表示数据是否插入成功
     $res = $mysqli->query($insert); 

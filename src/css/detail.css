@@ -443,39 +443,69 @@ body {
   width: 560px;
   height: 560px;
 }
-.content .content-left .carousel-indicators {
-  z-index: 1000;
+.content .content-left .slideshow {
+  position: relative;
 }
-.content .content-left .carousel-indicators .active {
-  background-color: #a3a3a3;
+.content .content-left .slideshow .slideshow-indicators {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 6px;
+  display: flex;
+  justify-content: center;
+  bottom: 20px;
+  left: 0;
 }
-.content .content-left .carousel-indicators > li {
-  background: #ccc;
+.content .content-left .slideshow .slideshow-indicators .active {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.content .content-left .slideshow .slideshow-indicators > li {
   width: 50px;
-  border-radius: 0;
-  border: 0;
   height: 3px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #999;
+  margin: 0 4px;
+  cursor: pointer;
 }
-.content .content-left .container-fluid .left > div {
+.content .content-left .slideshow .slideshow-inner {
+  width: 560px;
+  height: 560px;
+  margin: 0 auto;
+  position: relative;
+}
+.content .content-left .slideshow .slideshow-inner .show {
+  opacity: 1;
+}
+.content .content-left .slideshow .slideshow-inner > img {
+  width: 560px;
+  height: 560px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.content .content-left .slideshow .slideshow-controls {
   width: 41px;
   height: 69px;
-  background: url(../img/icon-slides.png) no-repeat -85px 0;
+  opacity: 0.6;
   position: absolute;
+  cursor: pointer;
+}
+.content .content-left .slideshow .left-btn {
+  background: url(../img/icon-slides.png) no-repeat -85px 0;
   top: 245px;
   left: 0;
 }
-.content .content-left .container-fluid .left > div:hover {
+.content .content-left .slideshow .left-btn:hover {
   background: url(../img/icon-slides.png) no-repeat 0 0;
 }
-.content .content-left .container-fluid .right > div {
-  width: 41px;
-  height: 69px;
+.content .content-left .slideshow .right-btn {
   background: url(../img/icon-slides.png) no-repeat -126px 0;
-  position: absolute;
   top: 245px;
   right: 0;
 }
-.content .content-left .container-fluid .right > div:hover {
+.content .content-left .slideshow .right-btn:hover {
   background: url(../img/icon-slides.png) no-repeat -41px 0;
 }
 .content .content-right > :nth-child(1) {

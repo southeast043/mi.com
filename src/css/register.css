@@ -1,1 +1,231 @@
 @charset "utf-8";
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.bg {
+  width: 100%;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+.bg .content {
+  width: 854px;
+  height: 580px;
+  padding: 0 34px 30px;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #fff;
+}
+.bg .content .logo {
+  padding: 30px 0 40px;
+}
+.bg .content .logo > img {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+}
+.bg .content > h4 {
+  font-size: 30px;
+  text-align: center;
+  color: #333;
+}
+.bg .content > form {
+  width: 332px;
+  margin: 0 auto;
+}
+.bg .content > form > div {
+  width: 332px;
+}
+.bg .content > form > div .country {
+  position: absolute;
+  background-color: #fff;
+  transform: translate(-50%);
+  display: none;
+  z-index: 100;
+  border: 1px solid #ccc;
+}
+.bg .content > form > div .country > :nth-child(1) {
+  width: 332px;
+  height: 68px;
+  padding: 10px 20px;
+  position: relative;
+  background-color: #fff;
+}
+.bg .content > form > div .country > :nth-child(1) > input {
+  padding: 0 20px 0 48px;
+  width: 100%;
+  height: 100%;
+  color: #bbb;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.bg .content > form > div .country > :nth-child(1) .glyphicon-search {
+  display: block;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+  line-height: 48px;
+  text-align: center;
+  top: 10px;
+  left: 20px;
+}
+.bg .content > form > div .country > :nth-child(2) {
+  width: 332px;
+  height: 180px;
+  overflow: auto;
+}
+.bg .content > form > div .country > :nth-child(2) > div {
+  padding: 0 20px;
+  font-size: 12px;
+  color: #ff5c00;
+  background-color: #fff;
+  text-align: left;
+}
+.bg .content > form > div .country > :nth-child(2) > ul > li {
+  width: 332px;
+  height: 30px;
+  padding: 10px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+}
+.bg .content > form > div .country > :nth-child(2) > ul > li > div {
+  font-size: 17px;
+  color: #999;
+}
+.bg .content > form > div .country > :nth-child(2) > ul > li:hover {
+  background-color: #fff3e6;
+}
+.bg .content > form .show {
+  display: block;
+}
+.bg .content > form .countrybox {
+  margin-bottom: 20px;
+  position: relative;
+}
+.bg .content > form .countrybox .country {
+  top: 66px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.bg .content > form .countrybox > p {
+  margin: 5px 0;
+}
+.bg .content > form .countrybox > :nth-child(2) {
+  width: 332px;
+  height: 42px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  line-height: 42px;
+  position: relative;
+  color: #333;
+}
+.bg .content > form .countrybox > :nth-child(2) > span {
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 42px;
+  color: #ccc;
+}
+.bg .content > form .phonenumber {
+  margin-bottom: 20px;
+}
+.bg .content > form .phonenumber > p {
+  color: #333;
+  margin: 5px 0;
+}
+.bg .content > form .phonenumber > div {
+  width: 332px;
+  height: 42px;
+  position: relative;
+  border: 1px solid #ccc;
+}
+.bg .content > form .phonenumber > div .country {
+  top: 40px;
+  left: 32px;
+}
+.bg .content > form .phonenumber > div > div {
+  width: 68px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  color: #333;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  border: 1px solid #ccc;
+}
+.bg .content > form .phonenumber > div > div > span {
+  margin-left: 10px;
+}
+.bg .content > form .phonenumber > div > input {
+  width: 264px;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-left: 66px;
+}
+.bg .content > form .phonenumber > div > span {
+  position: absolute;
+  top: 10px;
+  left: 78px;
+}
+.bg .content > form .phonenumber > :nth-child(3),
+.bg .content > form .phonenumber > :nth-child(4) {
+  color: #ff6666;
+  display: none;
+}
+.bg .content > form > button {
+  width: 332px;
+  height: 40px;
+  border: none;
+  background-color: #ff6700;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+}
+.bg .content > form > button:hover {
+  opacity: 0.5;
+}
+.bg .content > p {
+  text-align: center;
+  margin-top: 60px;
+  cursor: pointer;
+  color: #999;
+}
+.bg .content > p > span {
+  font-weight: bold;
+  color: #333;
+}
+.bg .footer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.bg .footer > p {
+  text-align: center;
+  color: #757575;
+  margin: 10px 0;
+}
+.bg .footer > p .active {
+  color: #333;
+}
+.bg .footer > p > a {
+  color: #757575;
+}
+.bg .footer > p > span {
+  margin: 0 10px;
+}

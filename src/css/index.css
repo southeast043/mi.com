@@ -394,61 +394,74 @@ body {
 .nav > :nth-child(1) > :nth-child(2) .all > a {
   display: none;
 }
-.carousel {
+.slideshow {
   width: 1226px;
   height: 460px;
   margin: 0 auto;
   position: relative;
 }
-.carousel .container-fluid {
-  width: 100%;
-  padding: 0;
+.slideshow .slideshow-indicators {
+  position: absolute;
+  z-index: 100;
+  width: 100px;
+  height: 6px;
+  display: flex;
+  justify-content: space-between;
+  right: 20px;
+  bottom: 30px;
 }
-.carousel .container-fluid .left {
-  left: 234px;
+.slideshow .slideshow-indicators .active {
+  background-color: rgba(255, 255, 255, 0.4);
 }
-.carousel .container-fluid .left > div {
+.slideshow .slideshow-indicators > li {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 2px solid #999;
+  margin: 0 4px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slideshow .slideshow-inner {
+  width: 1226px;
+  height: 460px;
+  margin: 0 auto;
+  position: relative;
+}
+.slideshow .slideshow-inner .show {
+  opacity: 1;
+}
+.slideshow .slideshow-inner > img {
+  width: 1226px;
+  height: 460px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.slideshow .slideshow-controls {
   width: 41px;
   height: 69px;
-  background: url(../img/icon-slides.png) no-repeat -85px 0;
   opacity: 0.6;
   position: absolute;
+  cursor: pointer;
+}
+.slideshow .left-btn {
+  background: url(../img/icon-slides.png) no-repeat -85px 0;
   top: 212px;
   left: 234px;
 }
-.carousel .container-fluid .left > div:hover {
+.slideshow .left-btn:hover {
   background: url(../img/icon-slides.png) no-repeat 0 0;
 }
-.carousel .container-fluid .right > div {
-  width: 41px;
-  height: 69px;
+.slideshow .right-btn {
   background: url(../img/icon-slides.png) no-repeat -126px 0;
-  opacity: 0.6;
-  position: absolute;
   top: 212px;
   right: 0;
 }
-.carousel .container-fluid .right > div:hover {
+.slideshow .right-btn:hover {
   background: url(../img/icon-slides.png) no-repeat -41px 0;
-}
-.carousel .container-fluid .carousel-indicators {
-  width: 200px;
-  margin: 0;
-  left: 85%;
-  bottom: 20px;
-}
-.carousel .container-fluid .carousel-indicators .active {
-  background: rgba(255, 255, 255, 0.6);
-  border-color: #929292;
-}
-.carousel .container-fluid .carousel-indicators > li {
-  background: #929292;
-  border-color: #b3b3b3;
-  margin: 2px;
-}
-.carousel .container-fluid .carousel-indicators > li:hover {
-  background: rgba(255, 255, 255, 0.6);
-  border-color: #929292;
 }
 .banner-ad {
   width: 1226px;

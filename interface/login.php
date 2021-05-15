@@ -18,6 +18,10 @@
     $mysqli->close();
 
     if($result->num_rows>0){
+
+        setcookie('username',$username,time()+3600*24,'/');
+        setcookie('isLogined','true',time()+3600*24,'/');
+
         echo '<script>alert("登陆成功");</script>';
         echo '<script>location.href="../src/html/index.html";</script>';
     }else{

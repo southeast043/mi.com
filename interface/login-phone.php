@@ -16,6 +16,10 @@
     $result = $mysqli->query($sql);
 
     if($result->num_rows>0){
+
+        setcookie('username',$phone,time()+3600*24,'/');
+        setcookie('isLogined','true',time()+3600*24,'/');
+
         echo '<script>alert("登录成功");</script>';
         echo '<script>location.href="../src/html/index.html"</script>';
         $mysqli->close(); // 断开连接
@@ -30,6 +34,10 @@
     $mysqli->close();
 
     if($res){
+
+        setcookie('username',$phone,time()+3600*24,'/');
+        setcookie('isLogined','true',time()+3600*24,'/');
+
         echo '<script>alert("注册成功");</script>';
         echo '<script>location.href="../src/html/index.html"</script>';
     }

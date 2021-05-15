@@ -3,6 +3,18 @@ import cookie from './library/cookie.js';
 import { footer } from "../js/library/footer.js";
 
 let shop = cookie.get('shop');
+let username = cookie.get('username');
+let isLogined = cookie.get('isLogined');
+
+if (!isLogined) location = '../html/index.html'
+
+$('.username').html(`${username}<span class="glyphicon glyphicon-chevron-down">`)
+
+$('.loginout').on('click',function(){
+    cookie.remove('username');
+    cookie.remove('isLogined');
+    location.reload();
+})
 
 if (shop) {
     shop = JSON.parse(shop);

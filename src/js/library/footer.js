@@ -1,6 +1,6 @@
 import { $ } from "./jquery.js";
 
-let footer = $(function () {
+const footer = function () {
 
     // 侧边栏
     $(document).scroll(function () {
@@ -39,5 +39,6 @@ let footer = $(function () {
     setInterval(function () {
         $('.footer-content>.clr>:nth-last-child(1)>.none').removeClass('none').siblings().addClass('none');
     }, 1000);
-})
+}
+
 export { footer };

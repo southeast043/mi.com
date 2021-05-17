@@ -1,8 +1,11 @@
 import { $ } from "../js/library/jquery.js";
+import { isLogined }from "../js/library/islogined.js";
 import { slideshow } from "../js/library/slideshow.js";
 import { header } from "../js/library/header.js";
 import { footer } from "../js/library/footer.js";
 import "../js/library/jquery.lazyload.js"
+
+isLogined();
 
 $.ajax({
     type: "get",
@@ -67,7 +70,7 @@ $.ajax({
 $(function () {
 
     // 头部
-    header;
+    header();
 
     // 轮播图
     slideshow;
@@ -187,7 +190,7 @@ $(function () {
     })
 
     // 底部
-    footer;
+    footer();
 })
 
 

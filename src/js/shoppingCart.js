@@ -6,11 +6,11 @@ let shop = cookie.get('shop');
 let username = cookie.get('username');
 let isLogined = cookie.get('isLogined');
 
-if (!isLogined) location = '../html/index.html'
+if (!isLogined) location = '../html/login.html'
 
 $('.username').html(`${username}<span class="glyphicon glyphicon-chevron-down">`)
 
-$('.loginout').on('click',function(){
+$('.loginout').on('click', function () {
     cookie.remove('username');
     cookie.remove('isLogined');
     location.reload();

@@ -1,4 +1,54 @@
 @charset "utf-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+input {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  /*去除img下方3-6px间距*/
+}
+a {
+  text-decoration: none !important;
+}
+ul,
+ol,
+li {
+  list-style: none !important;
+}
+/*h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}*/
+.fl {
+  float: left !important;
+}
+.fr {
+  float: right !important;
+}
+.clr:after {
+  content: "." !important;
+  display: block !important;
+  height: 0 !important;
+  clear: both !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+}
+* {
+  box-sizing: border-box;
+}
 .service .service-title {
   width: 1226px;
   height: 80px;

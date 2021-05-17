@@ -1,6 +1,6 @@
 import { $ } from "./jquery.js";
 
-let header = $(function () {
+const header = function () {
 
     // 弹出层
     $('.register').on('click', function () {
@@ -8,39 +8,6 @@ let header = $(function () {
     })
     $('.remove-jump').on('click', function () {
         $('.jump').css('display', 'none')
-    })
-
-    // 购物车
-    $('.car').on('mouseover', function () {
-
-        $('.car-drop').stop().animate({
-            'height': '100px'
-        }, 300)
-
-        $('.car').css({
-            'background-color': '#fff',
-            'color': '#ff6700'
-        })
-
-        $('.car>span').css({
-            'color': '#ff6700'
-        })
-
-        $('.car').on('mouseout', function () {
-            $('.car-drop').stop().animate({
-                'height': '0'
-            }, 300, function () {
-                $('.car').css({
-                    'background-color': '#3f3f3f',
-                    'color': '#b0b0b0'
-                })
-                $('.car>span').css({
-                    'color': '#b0b0b0'
-                })
-            })
-
-        })
-
     })
 
     // logo
@@ -56,7 +23,6 @@ let header = $(function () {
             })
         })
     })
-
 
     // 下拉菜单
     $('.nav-con').on('mouseover', function () {
@@ -115,6 +81,6 @@ let header = $(function () {
             'display': 'none'
         })
     })
-})
+}
 
 export { header };

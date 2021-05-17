@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/index.css">
     <script src="../js/index.js" type="module"></script>
 </head>
@@ -48,17 +47,32 @@
                 <a href="#">Select Location</a>
             </div>
             <div class="header-right fr">
-                <a href="./login.html">登录</a>
+                <a href="./login.html" class="h-show h-1">登录</a>
+                <a href="#" class="h-hide h-2 mine">
+                    admin
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                    <ul>
+                        <li>个人中心</li>
+                        <li>评价晒单</li>
+                        <li>我的喜欢</li>
+                        <li>小米账户</li>
+                        <li class="loginout">退出登录</li>
+                    </ul>
+                </a>
                 <span>|</span>
-                <a href="#" class="register">注册</a>
-                <span>|</span>
+                <a href="#" class="register h-show h-1">注册</a>
+                <span class="h-show h-1">|</span>
                 <a href="#">消息通知</a>
-                <a class="car fr" href="shoppingCart.html">
-                    <span class="iconfont icon-close"></span>购物车 (0)
-                    <div class="car-drop">
+                <span class="h-hide h-2">|</span>
+                <a href="#" class="h-hide h-2">我的订单</a>
+                <a class="car fr" href="./shoppingCart.html">
+                    <span class="iconfont icon-close"></span>购物车 (<span class="shopnumber">0</span>)
+                </a>
+                <div class="car-drop">
+                    <div>
                         购物车中还没有商品，赶紧选购吧！
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </div>

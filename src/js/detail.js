@@ -1,8 +1,11 @@
 import { $ } from "../js/library/jquery.js";
+import { isLogined }from "../js/library/islogined.js";
 import { slideshow } from "../js/library/slideshow.js";
 import { header } from "../js/library/header.js";
 import { footer } from "../js/library/footer.js";
 import cookie from './library/cookie.js';
+
+isLogined();
 
 let id = location.search.split('=')[1];
 
@@ -178,8 +181,8 @@ function addItem(id, price, num) {
 $(function () {
 
     // 头部
-    header;
+    header();
 
     // 底部
-    footer;
+    footer();
 })
